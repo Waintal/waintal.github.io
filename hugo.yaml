@@ -1,0 +1,60 @@
+baseURL: https://waintal.github.io/
+locale: en-us
+title: Xavier Waintal
+enableRobotsTXT: true
+
+params:
+  name: Xavier Waintal
+  role: Director of Research at CEA Grenoble
+  lab: PHELIQS, Université Grenoble Alpes
+  affiliation: Université Grenoble Alpes, CEA, Grenoble INP, IRIG, PHELIQS, 38000 Grenoble, France
+  description: Xavier Waintal, theoretical physicist at CEA Grenoble. Quantum nanoelectronics, out-of-equilibrium many-body physics, tensor networks, quantum computing.
+  email: xavier.waintal@cea.fr
+  links:
+    - name: Google Scholar
+      url: https://scholar.google.com/citations?user=97nxOxIAAAAJ
+    - name: arXiv
+      url: https://arxiv.org/search/?searchtype=author&query=Waintal%2C+X
+    - name: ORCID
+      url: https://orcid.org/0000-0003-3816-8290
+
+menus:
+  main:
+    - name: Home
+      pageRef: /
+      weight: 1
+    - name: Research
+      pageRef: /research
+      weight: 2
+    - name: Publications
+      pageRef: /publications
+      weight: 3
+    - name: Projects
+      pageRef: /projects
+      weight: 4
+    - name: Talks
+      pageRef: /talks
+      weight: 5
+    - name: Blog
+      pageRef: /blog
+      weight: 6
+    - name: Join us
+      pageRef: /join
+      weight: 7
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['\[', '\]'], ['$$', '$$']]
+          inline: [['\(', '\)'], ['$', '$']]
+
+taxonomies: {}
+
+outputs:
+  home: [html, rss]
+  section: [html, rss]

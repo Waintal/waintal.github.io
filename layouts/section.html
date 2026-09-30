@@ -1,0 +1,10 @@
+{{ define "main" }}
+<div class="page-head"><h1>{{ .Title }}</h1>{{ with .Params.subtitle }}<p class="sub">{{ . }}</p>{{ end }}</div>
+<div class="prose">{{ .Content }}</div>
+<ul class="plain postlist prose">
+  {{ range .Pages }}
+  <li class="post"><div class="d">{{ .Date.Format "2 January 2006" }}</div><a class="t" href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}</li>
+  {{ else }}<li class="muted">No posts yet.</li>{{ end }}
+</ul>
+{{ end }}

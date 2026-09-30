@@ -1,0 +1,13 @@
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="{{ "/" | relURL }}">{{ site.Params.name }}</a>
+    <nav class="menu" aria-label="Main">
+      {{- $cur := . }}
+      {{- range site.Menus.main }}
+      {{- $active := or ($cur.IsMenuCurrent "main" .) ($cur.HasMenuCurrent "main" .) }}
+      {{- if and (not $active) .Page }}{{ $active = or (eq $cur .Page) ($cur.IsDescendant .Page | and (not .Page.IsHome)) }}{{ end }}
+      <a href="{{ .URL }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{- end }}
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,15 @@
+{{- /* One publication entry. Context: dict "p" (entry from data/publications.yaml) "full" (bool) */ -}}
+{{- $p := .p -}}
+{{- $authors := $p.authors | replaceRE `(Xavier Waintal|X\. ?Waintal)` `<b>$1</b>` -}}
+<li class="paper" data-search="{{ lower (printf "%s %s %s %s %v" $p.title $p.authors $p.journal (or $p.arxiv "") $p.year) }}">
+  {{- $main := cond (isset $p "doi") (printf "https://doi.org/%s" $p.doi) (cond (isset $p "arxiv") (printf "https://arxiv.org/abs/%s" $p.arxiv) "") }}
+  {{ if .full }}<span class="num">{{ $p.n }}.</span>{{ end }}{{ if $main }}<a class="t" href="{{ $main }}">{{ $p.title }}</a>{{ else }}<span class="t">{{ $p.title }}</span>{{ end }}
+  <div class="a">{{ $authors | safeHTML }}</div>
+  <div class="m">
+    {{ if isset $p "doi" }}<a class="j" href="https://doi.org/{{ $p.doi }}">{{ $p.journal }}</a>{{ else }}<span class="j">{{ $p.journal }}</span>{{ end }}
+    {{ with $p.arxiv }}<a href="https://arxiv.org/abs/{{ . }}">arXiv:{{ . }}</a><a href="https://arxiv.org/pdf/{{ . }}">pdf</a>{{ end }}
+    {{ if .full }}{{ range $p.also }}<a href="{{ .url | relURL }}">{{ .label }}</a>{{ end }}{{ end }}
+    {{ if not .full }}<span class="tag">{{ $p.year }}</span>{{ end }}
+  </div>
+  {{ if and .full $p.abstract }}<details><summary>abstract</summary><p>{{ $p.abstract }}</p></details>{{ end }}
+</li>

@@ -1,0 +1,6 @@
+<footer>
+  <div class="wrap">
+    <div>{{ site.Params.name }} · {{ site.Params.affiliation }}</div>
+    <div><a href="mailto:{{ site.Params.email }}">Email</a>{{ range site.Params.links }} · <a href="{{ .url }}">{{ .name }}</a>{{ end }}</div>
+  </div>
+</footer>

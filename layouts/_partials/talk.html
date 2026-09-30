@@ -1,0 +1,13 @@
+{{- /* One talk card. A series of lectures has "parts": a list of {label, url}; the card links to the first one. */ -}}
+{{- $t := . -}}
+<div class="video">
+  <a class="vlink" href="{{ $t.url }}">
+    <div class="thumb{{ if in $t.url "youtube" }} play{{ end }}">
+      {{ with $t.thumb }}<img src="{{ printf "img/talks/%s" . | relURL }}" alt="" loading="lazy">{{ else }}<div class="ph">{{ $t.event }}</div>{{ end }}
+    </div>
+    <div class="vt">{{ $t.title }}{{ with $t.lang }}<span class="lang">{{ upper . }}</span>{{ end }}</div>
+  </a>
+  <div class="vm">{{ $t.event }}{{ with $t.date }} · {{ substr (string .) 0 4 }}{{ end }}</div>
+  {{ with $t.parts }}<div class="parts">{{ range . }}<a href="{{ .url }}">{{ .label }}</a>{{ end }}</div>{{ end }}
+  {{ with $t.page }}<div class="parts"><a href="{{ . }}">event page</a></div>{{ end }}
+</div>

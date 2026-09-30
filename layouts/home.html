@@ -1,0 +1,61 @@
+{{ define "main" }}
+<div class="hero">
+  <img src="{{ "img/photo.jpg" | relURL }}" alt="Photo of {{ site.Params.name }}">
+  <div>
+    <h1>{{ site.Params.name }}</h1>
+    <p class="role">{{ site.Params.role }} · {{ site.Params.lab }}</p>
+    <div class="intro">{{ .Content }}</div>
+    <div class="pills">
+      <a href="mailto:{{ site.Params.email }}">Email</a>
+      <a href="{{ "bio/" | relURL }}">Short bio</a>
+      {{ range site.Params.links }}<a href="{{ .url }}">{{ .name }}</a>{{ end }}
+    </div>
+  </div>
+</div>
+
+<section class="block">
+  <h2 class="sec">Research <a class="more" href="{{ "research/" | relURL }}">More about our research →</a></h2>
+  <div class="cards">
+    {{ range .Params.themes }}
+    <a class="card" href="{{ .link | relURL }}">
+      <div class="fig{{ if .contain }} contain{{ end }}"><img src="{{ .image | relURL }}" alt="" loading="lazy"></div>
+      <div class="body"><h3>{{ .title }}</h3><p>{{ .text }}</p></div>
+    </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="block two">
+  <div>
+    <h2 class="sec">Recent papers <a class="more" href="{{ "publications/" | relURL }}">All {{ len site.Data.publications }} publications →</a></h2>
+    <ul class="plain">
+      {{ range first 5 (where site.Data.publications "home" "ne" false) }}{{ partial "paper.html" (dict "p" . "full" false) }}{{ end }}
+    </ul>
+  </div>
+  <div>
+    <h2 class="sec">Blog <a class="more" href="{{ "blog/" | relURL }}">All posts →</a></h2>
+    <ul class="plain">
+      {{ range first 4 (where site.RegularPages "Section" "blog") }}
+      <li class="post"><div class="d">{{ .Date.Format "January 2006" }}</div><a class="t" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ with .Description }}<p>{{ . }}</p>{{ end }}</li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section class="block">
+  <h2 class="sec">Talks and videos <a class="more" href="{{ "talks/" | relURL }}">All talks →</a></h2>
+  <div class="videos">
+    {{ $feat := slice }}{{ range site.Data.talks }}{{ range .items }}{{ if .featured }}{{ $feat = $feat | append . }}{{ end }}{{ end }}{{ end }}
+    {{ range first 4 $feat }}{{ partial "talk.html" . }}{{ end }}
+  </div>
+</section>
+
+<section class="block">
+  <div class="join">
+    <div><h3>PhD, postdoc and internship positions</h3>
+      <p>I welcome applications at any time from students and postdocs who like theoretical physics and numerics.</p></div>
+    <a class="btn" href="{{ "join/" | relURL }}">Join us →</a>
+  </div>
+</section>
+{{ end }}

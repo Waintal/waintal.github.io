@@ -1,0 +1,1026 @@
+# Full publication list, newest first. Rendered by layouts/publications/list.html.
+# Fields: n (number, as in the CV), year, title, authors, journal, doi (optional), arxiv (optional), abstract (optional).
+# The "journal" field is free text: "Phys. Rev. B 111, 235411 (2025)", "Preprint", "Submitted to SciPost Phys.", ...
+# See CLAUDE.md for how to update this file.
+- n: 129
+  year: 2026
+  title: A fidelity metric for quantum annealing benchmarked by extreme scaling quantum Monte-Carlo simulations
+  authors: Gabriel Gouraud, Miha Srdinšek, and Xavier Waintal
+  journal: Preprint
+  arxiv: '2606.26233'
+  abstract: Quantum annealers are supposed to follow adiabatically the ground state of a system as its Hamiltonian slowly interpolates between a trivial phase and a non-trivial one; the non-trivial ground state being the solution to an optimization problem. Overwhelmingly, their performances are measured in terms of how well or fast the optimization problem is solved. While pragmatic, this approach is inherently brittle as it strongly depends on the problem considered and the classical algorithm used as the reference benchmark. Here, we propose a quantity that not only measures the end result but also the quality of the actual quantum annealing process itself. Our metric is the quantum annealing counterpart of the fidelity-per gate of gate-based quantum computers. It takes the form of an accuracy $ε$ for the equation of state of the annealer. We calculate benchmark values of $ε$ using two variants of the simulated quantum annealing technique for Rydberg atoms systems. Our first approach uses variational quantum Monte-Carlo with an ansatz inspired by thermal annealing. It suggests that within $ε\sim 10^{-2}-10^{-3}$, a quantum annealer is indistinguishable from its thermal classical counterpart. Critically, we could reach this precision up to $100,000,000$ atoms on a single CPU. Our second approach (based on Green function quantum Monte-Carlo) reaches accuracies around $ε\sim 10^{-4}$ and we have run it up to $100,000$ atoms. These results outperform current Rydberg atom quantum annealing experimental platforms in both precision and size by orders of magnitude and put severe constraints for future hardware.
+- n: 128
+  year: 2026
+  title: Replica Tensor Train
+  authors: Miha Srdinšek, Gabriel Gouraud, and Xavier Waintal
+  journal: Submitted to SciPost Phys.
+  arxiv: '2604.22718'
+  abstract: We describe a numerical many-body technique that is based on both tensor networks and quantum Monte Carlo. The variational ansatz is a tensor network that can harvest volume-law entanglement. It is constructed from a tensor train to which one applies a set of non-local operators that force several indices of the tensor train to represent the same physical index, hence its name -- replica tensor train (RTT). From the tensor network toolbox, it inherits the possibility to make linear combinations of these states and apply a certain class of operators. We can therefore find the ground-state of a local Hamiltonian in a purely algebraic way as in standard tensor network algorithms -- i.e. without using gradient descent methods. On the other hand, the volume-law structure forbids calculating physical observables directly. In much the same way as on a quantum computer where one can prepare a state but can only sample it at the end, here we have to use Markov Chain Monte Carlo to compute the observables. We further show that the approach can be extended to build Krylov-subspace ground-state methods within the variational manifold. We illustrate the different algorithms on a two-dimensional spin model with a transverse magnetic field, which can be solved by this approach at low computational cost.
+- n: 127
+  year: 2026
+  title: A multilevel tensor network compression technique for simulating Lindblad dynamics in superconducting circuits
+  authors: Adrien Moulinas and Xavier Waintal
+  journal: Preprint
+  arxiv: '2605.27515'
+  abstract: 'Designing superconducting quantum hardware requires simulation tools that can account for various deviations from ideal scenarios. This, in turn, requires approaches that automatically detect certain structures and leverage them to make the computation affordable. Here, we develop a tensor network based technique to simulate the Lindblad dynamics of a few interacting bosonic modes with a focus on superconducting quantum circuits. The technique detects and takes advantage of two very common situations: (i) the density matrix being pure or not far from pure and (ii) the entanglement between different modes being moderate (typically qubit-like). However, (iii) the occupation of the modes can be arbitrarily high (making naïve truncations inefficient). To leverage these features, we use three different nested levels of tensor network compression: (i) we work with a global purification of the density matrix, (ii) we compress the connection between different modes to account for the moderate entanglement and (iii) we use a quantics representation of the Fock occupation number. We showcase the technique for the simulation of large cat qubits as well as for the ionization of transmon qubits, demonstrating orders-of-magnitude speed-up with respect to brute force approaches. In the latter example, it brings the simulation, previously reported on a large supercomputing infrastructure, to laptop level. The favorable scaling with system size should bring genuine computer assisted design of these systems within scope.'
+- n: 126
+  year: 2026
+  title: Tailoring tensor network techniques to the quantics representation for highly inhomogeneous problems and few body problems
+  authors: Jheng-Wei Li, Nicolas Jolly, and Xavier Waintal
+  journal: Preprint
+  arxiv: '2604.09337'
+  home: false
+  abstract: Tensor network techniques are becoming increasingly popular tools to solve partial differential equations within the so-called quantics representation. Their popularity stems from the fact that their spatial resolution depends only logarithmically on the number of grid points, making them very tempting approaches in situations where two or more characteristic length scales are vastly different. A first generation of technique used ``out-of-the-box'' algorithms of the tensor network toolkit (e.g. the celebrated Density Matrix Product State (DMRG) algorithm) to solve these problems. These techniques were designed for situations (e.g. quantum magnetism) where the different degrees of freedom (e.g. spins) play equivalent roles. In the quantics representation, however, the different degrees of freedom correspond to the physics at different scales and therefore play inequivalent role. Here we show that by tailoring the tensor network algorithms to this particular case, in the spirit of the multigrid approach, we obtain faster and more robust convergence of the algorithms. We showcase the approach on linear (Poisson equation) and eigenvalue (Schrödinger equation) problems in two, three and four dimensions. Our simulations involve up to $2^{80}$ grid points and would represent, we argue, a very strong challenge for conventional approaches.
+- n: 125
+  year: 2026
+  title: Effect of electron-electron interactions on the propagation of ultrashort voltage pulses in a Mach–Zehnder interferometer
+  authors: Prasoon Kumar, Thomas Kloss, and Xavier Waintal
+  journal: Low Temperature Physics 52, 1036-1047 (2026)
+  doi: 10.1063/10.0044811
+  arxiv: '2602.23973'
+  home: false
+  abstract: Electronic interferometers have been identified as possible candidates for building electronic flying qubits. Such a regime requires ultrafast voltage pulses whose duration is shorter than the time of flight through the device. Understanding the corresponding physics in the presence of such short excitations requires a proper treatment of electron-electron interactions. In this article, we take a step in this direction by performing time-resolved simulations of a Mach-Zehnder interferometer treating the interactions at the time-dependent mean-field level. We find that the main effect of the interaction is the renormalization of the pulse velocity. Very importantly, the interference effects appear to be robust to the presence of interactions.
+- n: 124
+  year: 2026
+  title: Who can compete with quantum computers? Lecture notes on quantum inspired tensor networks computational techniques
+  authors: Xavier Waintal, Chen-How Huang, and Christoph W. Groth
+  journal: SciPost Phys. Lect. Notes 133 (2026)
+  doi: 10.21468/scipostphyslectnotes.133
+  arxiv: '2601.03035'
+  abstract: 'This is a set of lectures on tensor networks with a strong emphasis on the core algorithms involving Matrix Product States (MPS) and Matrix Product Operators (MPO). Compared to other presentations, particular care has been given to disentangle aspects of tensor networks from the quantum many-body problem: MPO/MPS algorithms are presented as a way to deal with linear algebra on extremely (exponentially) large matrices and vectors, regardless of any particular application. The lectures include well-known algorithms to find eigenvectors of MPOs (the celebrated DMRG), solve linear problems, and recent learning algorithms that allow one to map a known function into an MPS (the Tensor Cross Interpolation, or TCI, algorithm). The lectures end with a discussion of how to represent functions and perform calculus with tensor networks using the "quantics" representation. They include the detailed analytical construction of important MPOs such as those for differentiation, indefinite integration, convolution, and the quantum Fourier transform. Three concrete applications are discussed in detail: the simulation of a quantum computer (either exactly or with compression), the simulation of a quantum annealer, and techniques to solve partial differential equations (e.g. Poisson, diffusion, or Gross-Pitaevskii) within the "quantics" representation. The lectures have been designed to be accessible to a first-year PhD student and include detailed proofs of all statements.'
+- n: 123
+  year: 2026
+  title: Solving the Gross-Pitaevskii equation on multiple different scales using the quantics tensor train representation
+  authors: Marcel Niedermeier, Adrien Moulinas, Thibaud Louvet, Jose L. Lado, and Xavier Waintal
+  journal: Phys. Rev. Research 8, 023006 (2026)
+  doi: 10.1103/zwn1-f981
+  arxiv: '2507.04262'
+  abstract: Solving partial differential equations of highly featured problems represents a formidable challenge, where reaching high precision across multiple length scales can require a prohibitive amount of computer memory or computing time. However, the solutions to physics problems typically have structures operating on different length scales, and as a result exhibit a high degree of compressibility. Here, we use the quantics tensor train representation to build a solver for the time-dependent Gross-Pitaevskii equation. We demonstrate that the quantics approach generalizes well to the presence of the non-linear term in the equation. We show that we can resolve phenomena across length scales separated by seven orders of magnitude in one dimension within one hour on a single core in a laptop, greatly surpassing the capabilities of more naive methods. We illustrate our methodology with various modulated optical trap potentials presenting features at vastly different length scales, including solutions to the Gross-Pitaevskii equation on two-dimensional grids above a trillion points ($2^{20} \times 2^{20}$). This quantum-inspired methodology can be readily extended to other partial differential equations combining spatial and temporal evolutions, providing a powerful method to solve highly featured differential equations at unprecedented length scales.
+- n: 122
+  year: 2026
+  title: 'Electrostatics in semiconducting devices II: Solving the Helmholtz equation'
+  authors: Antonio Lacerda-Santos and Xavier Waintal
+  journal: SciPost Phys. 20, 163 (2026)
+  doi: 10.21468/scipostphys.20.6.163
+  arxiv: '2507.03131'
+  abstract: The convergence of iterative schemes to achieve self-consistency in mean field problems such as the Schrödinger-Poisson equation is notoriously capricious. It is particularly difficult in regimes where the non-linearities are strong such as when an electron gas in partially depleted or in presence of a large magnetic field. Here, we address this problem by mapping the self-consistent quantum-electrostatic problem onto a Non-Linear Helmoltz (NLH) equation at the cost of a small error. The NLH equation is a generalization of the Thomas-Fermi approximation. We show that one can build iterative schemes that are provably convergent by constructing a convex functional whose minimum is the seeked solution of the NLH problem. In a second step, the approximation is lifted and the exact solution of the initial problem found by iteratively updating the NLH problem until convergence. We show empirically that convergence is achieved in a handfull, typically one or two, iterations. Our set of algorithms provide a robust, precise and fast scheme for studying the effect of electrostatics in quantum nanoelectronic devices.
+- n: 121
+  year: 2026
+  title: Hybrid between biologically and quantum-inspired many-body states
+  authors: Miha Srdinšek and Xavier Waintal
+  journal: Phys. Rev. B 113, 125107 (2026)
+  doi: 10.1103/b2kz-15c5
+  arxiv: '2506.05050'
+  abstract: Deep neural networks can represent very different sorts of functions, including complex quantum many-body states. Tensor networks can also represent these states, have more structure and are easier to optimize. However, they can be prohibitively costly computationally in two or higher dimensions. Here, we propose a generalization of the perceptron -- the perceptrain -- which borrows features from the two different formalisms. We construct variational many-body ansatz from a simple network of perceptrains. The network can be thought of as a neural network with a few distinct features inherited from tensor networks. These include efficient local optimization akin to the density matrix renormalization algorithm, instead of optimizing all the parameters at once; the possibility to dynamically increase the number of parameters during the optimization; the possibility to compress the state; and a structure that remains quantum-inspired. We showcase the ansatz using a combination of variational Monte Carlo (VMC) and Green function Monte Carlo (GFMC) on a $10\times 10$ transverse field quantum Ising model with a long-range $1/r^6$ antiferromagnetic interaction. The model corresponds to the Rydberg (cold) atoms platform proposed for quantum annealing. We consistently find a very high relative accuracy for the ground state energy, around $10^{-5}$ for VMC and $10^{-6}$ for GFMC in all regimes of parameters, including in the vicinity of the quantum phase transition. We use very small ranks ($\sim 2$-$5$) of perceptrains, as opposed to multiples of thousand used in matrix product states. The optimization of the energy was very robust. The entire phase diagram was found with a single initial condition and a fixed set of hyperparameters.
+- n: 120
+  year: 2026
+  title: 'Electrostatics in semiconducting devices I: The pure electrostatics self consistent approximation'
+  authors: A. Lacerda-Santos and Xavier Waintal
+  journal: SciPost Phys. 20, 100 (2026)
+  doi: 10.21468/scipostphys.20.4.100
+  arxiv: '2502.15897'
+  abstract: In quantum nanoelectronics devices, the electrostatic energy is the largest energy scale at play and, to a large extend, it determines the charge distribution inside the devices. Here, we introduce the Pure Electrostatic Self consistent Approximation (PESCA) that provides a minimum model that describes how to include a semiconductor in an electrostatic calculation to properly account for both screening and partial depletion due to e.g. field effect. We show how PESCA may be used to reconstruct the charge distribution from the measurement of pinch-off phase diagrams in the gate voltages space. PESCA can also be extended to account for magnetic field and calculate the edge reconstruction in the quantum Hall regime. The validity of PESCA is controlled by a small parameter $κ= C_g/C_q$, the ratio of the geometrical capacitance to the quantum capacitance, which is, in many common situations, of the order of 1%, making PESCA a quantitative technique for the calculation of the charge distribution inside devices.
+- n: 119
+  year: 2026
+  title: Matrix Product States and First Quantization
+  authors: Jheng-Wei Li and Xavier Waintal
+  journal: Phys. Rev. Lett. 136, 116503 (2026)
+  doi: 10.1103/5fx2-rsf8
+  arxiv: '2404.07105'
+  abstract: Common wisdom says that the entanglement of fermionic systems can be low in the second quantization formalism but is extremely large in the first quantization. Hence Matrix Product State (MPS) methods based on moderate entanglement have been overwhelmingly formulated in second quantization. Here we introduce a first-quantized MPS approach to simulate quantum many-body systems. We show that by reformulating the way the fermionic anti-symmetry is handled, we arrive at MPS with a level of entanglement comparable to the usual one found in second quantization. We demonstrate our scheme on the one-dimensional $t$-$V$ model (spinless fermions with nearest neighbour density-density interaction) for both ground state and time evolution. For time evolution, we find that the entanglement entropy in first quantization is significantly smaller than in its second quantization counterpart.
+- n: 118
+  year: 2026
+  title: Feasibility of performing quantum chemistry calculations on quantum computers
+  authors: Thibaud Louvet, Thomas Ayral, and Xavier Waintal
+  journal: Phys. Rev. B 113, 125112 (2026)
+  doi: 10.1103/hpt6-9tnk
+  arxiv: '2306.02620'
+  abstract: Quantum chemistry is envisioned as an early and disruptive application for quantum computers. Yet, closer scrutiny of the proposed algorithms shows that there are considerable difficulties along the way. Here, we propose two criteria for evaluating two leading quantum approaches for finding the ground state of molecules. The first criterion applies to the variational quantum eigensolver (VQE) algorithm. It sets an upper bound to the level of imprecision/decoherence that can be tolerated in quantum hardware as a function of the targeted precision, the number of gates and the typical energy contribution from states populated by decoherence processes. We find that decoherence is highly detrimental to the accuracy of VQE and performing relevant chemistry calculations would require performances that are expected for fault-tolerant quantum computers, not mere noisy hardware, even with advanced error mitigation techniques. Physically, the sensitivity of VQE to decoherence originates from the fact that, in VQE, the spectrum of the studied molecule has no correlation with the spectrum of the quantum hardware used to perform the computation. The second criterion applies to the quantum phase estimation (QPE) algorithm, which is often presented as the go-to replacement of VQE upon availability of (noiseless) fault-tolerant quantum computers. QPE requires an input state with a large enough overlap with the sought-after ground state. We provide a criterion to estimate quantitatively this overlap based on the energy and the energy variance of said input state. Using input states from a variety of state-of-the-art classical methods, we show that the scaling of this overlap with system size does display the standard orthogonality catastrophe, namely an exponential suppression with system size. This in turns leads to an exponentially reduced QPE success probability.
+- n: 117
+  year: 2025
+  title: Comprehensive study of out-of-equilibrium Kondo effect and Coulomb blockade
+  authors: Matthieu Jeannin, Yuriel Núñez Fernández, Thomas Kloss, Olivier Parcollet, and Xavier Waintal
+  journal: Phys. Rev. B 112, 155159 (2025)
+  doi: 10.1103/9yzc-rnzh
+  arxiv: '2502.16306'
+  abstract: We present a comprehensive set of numerically exact results for the Anderson model of a quantum dot coupled to two electrodes in non-equilibrium regime. We use a high order perturbative expansion in power of the interaction $U$, coupled to a cross-extrapolation method to long time and large interaction. The perturbative series is computed up to $20-25$ orders, using tensor cross-interpolation. We calculate the full Coulomb diamond bias voltage - gate voltage map, including its Kondo ridge, that forms the standard experimental signature of the Coulomb blockage and the Kondo effect. We present current-voltage characteristics that spans three orders of magnitude in bias voltage and display five different regimes of interest from probing the Kondo resonance at small bias to saturation at very high bias. Our technique also naturally produces time-resolved interaction quenches which we use to study the dynamics of the formation of the Kondo cloud. Finally, we predict several qualitatively new physical features that should be within reach of existing or upcoming experiments.
+- n: 116
+  year: 2025
+  title: Propagation of ultrashort voltage pulses through a small quantum dot
+  authors: Thomas Kloss and Xavier Waintal
+  journal: Phys. Rev. B 111, 235411 (2025)
+  doi: 10.1103/physrevb.111.235411
+  arxiv: '2502.03428'
+  abstract: 'The coherent transport of time-resolved ultrafast excitations in nanoelectronic interferometers is expected to exhibit an interesting interplay between the interferences and the time-dependent drive. However, the typical frequencies required to unlock this physics are in the THz range, making its observation challenging. In this work, we consider the propagation of the excitation generated by ultrashort voltage pulses through a small quantum dot, a system which we argue can display similar physics at significantly lower frequencies. We model the system with a single resonant level connected to two infinite electrodes subjected to a time-dependent voltage bias. For short pulses, we predict that the behaviour of the dot contrasts sharply with the long pulse (adiabatic) limit: the current actually oscillates with the amplitude of the voltage pulse. In the ultrafast limit, we predict that the current can even be negative, i.e. flow against the voltage drop. Our results are obtained by a combination of two approaches that are in quantitative agreement: explicit analytical expressions in the ultrafast and ultraslow limits and exact numerical simulations. We discuss the applicability of our findings and conclude that this system should be within reach of existing experimental platforms.'
+- n: 115
+  year: 2025
+  title: Electronic interferometry with ultrashort plasmonic pulses
+  authors: Seddik Ouacel, Lucas Mazzella, Thomas Kloss, Matteo Aluffi, Thomas Vasselon, Hermann Edlbauer, Junliang Wang, Clement Geffroy, Jashwanth Shaju, Arne Ludwig, Andreas D. Wieck, Michihisa Yamamoto, David Pomaranski, Shintaro Takada, Nobu-Hisa Kaneko, Giorgos Georgiou, Xavier Waintal, Matias Urdampilleta, Hermann Sellier, and Christopher Bäuerle
+  journal: Nat. Commun. 16, 4632 (2025)
+  doi: 10.1038/s41467-025-58939-4
+  arxiv: '2408.13025'
+  abstract: 'Electronic flying qubits offer an interesting alternative to photonic qubits: electrons propagate slower, hence easier to control in real time, and Coulomb interaction enables direct entanglement between different qubits. Although their coherence time is limited, flying electrons in the form of picosecond plasmonic pulses could be competitive in terms of the number of achievable coherent operations. The key challenge in achieving this critical milestone is the development of a new technology capable of injecting ''on-demand'' single-electron wavepackets into quantum devices, with temporal durations comparable to or shorter than the device dimensions. Here, we take a significant step towards achieving this regime in a quantum nanoelectronic system by injecting ultrashort single-electron plasmonic pulses into a 14-micrometer-long Mach-Zehnder interferometer. Our results establish that quantum coherence is robust under the on-demand injection of ultrashort plasmonic pulses, as evidenced by the observation of coherent oscillations in the single-electron regime. Building on this, our results demonstrate for the first time the existence of a new "non-adiabatic" regime that is prominent at high frequencies. This breakthrough highlights the potential of flying qubits as a promising alternative to localised qubit architectures, offering advantages such as a reduced hardware footprint, enhanced connectivity, and scalability for quantum information processing.'
+- n: 114
+  year: 2025
+  title: 'Learning tensor networks with tensor cross interpolation: New algorithms and libraries'
+  authors: Yuriel Núñez Fernández, Marc K. Ritter, Matthieu Jeannin, Jheng-Wei Li, Thomas Kloss, Thibaud Louvet, Satoshi Terasaki, Olivier Parcollet, Jan von Delft, Hiroshi Shinaoka, and Xavier Waintal
+  journal: SciPost Phys. 18, 104 (2025)
+  doi: 10.21468/scipostphys.18.3.104
+  arxiv: '2407.02454'
+  abstract: The tensor cross interpolation (TCI) algorithm is a rank-revealing algorithm for decomposing low-rank, high-dimensional tensors into tensor trains/matrix product states (MPS). TCI learns a compact MPS representation of the entire object from a tiny training data set. Once obtained, the large existing MPS toolbox provides exponentially fast algorithms for performing a large set of operations. We discuss several improvements and variants of TCI. In particular, we show that replacing the cross interpolation by the partially rank-revealing LU decomposition yields a more stable and more flexible algorithm than the original algorithm. We also present two open source libraries, xfac in Python/C++ and TensorCrossInterpolation.jl in Julia, that implement these improved algorithms, and illustrate them on several applications. These include sign-problem-free integration in large dimension, the superhigh-resolution quantics representation of functions, the solution of partial differential equations, the superfast Fourier transform, the computation of partition functions, and the construction of matrix product operators.
+- n: 113
+  year: 2025
+  title: Tensorized orbitals for computational chemistry
+  authors: Nicolas Jolly, Yuriel Núñez Fernández, and Xavier Waintal
+  journal: Phys. Rev. B 111, 245115 (2025)
+  doi: 10.1103/physrevb.111.245115
+  arxiv: '2308.03508'
+  abstract: Choosing a basis set is the first step of a quantum chemistry calculation and it sets its maximum accuracy. This choice of orbitals is limited by strong technical constraints as one must be able to compute a large number of six dimensional Coulomb integrals from these orbitals. Here we use tensor network techniques to construct representations of orbitals that essentially lift these technical constraints. We show that a large class of orbitals can be put into ``tensorized'' form including the Gaussian orbitals, Slater orbitals, linear combination thereof as well as new orbitals beyond the above. Our method provides a path for building more accurate and more compact basis sets beyond what has been accessible with previous technology. As an illustration, we construct optimized tensorized orbitals and obtain a 85% reduction of the error on the energy of the $H_2$ molecules with respect to a reference double zeta calculation (cc-pvDz) of the same size.
+- n: 112
+  year: 2025
+  title: Calculating Feynman diagrams with matrix product states
+  authors: Xavier Waintal
+  journal: 'Chapter in: Understanding Correlated Materials with DMFT, Autumn School on Correlated Electrons 2025, E. Pavarini, E. Koch, A. Lichtenstein and D. Vollhardt (eds.), Forschungszentrum Jülich (2025)'
+  doi: 10.34734/FZJ-2025-03722
+  arxiv: '2602.03598'
+  abstract: This text reviews, hopefully in a pedagogical manner, a series of work on the automatic calculations of Feynman diagrams in the context of quantum nanoelectronics (Keldysh formalism) with an application to the Kondo effect in the out-of-equilibrium single impurity Anderson model. It includes a discussion of (A) how to deal with the proliferation of diagrams, (B) how to calculate them using the Tensor Cross Interpolation algorithm instead of Monte-Carlo and (C) how to resum the obtained series. These notes correspond to a lecture given at the Autumn School on Correlated Electrons 2025 in Jullich, Germany. The book with all the lectures of the school (edited by Eva Pavarini, Erik Koch, Alexander Lichtenstein, and Dieter Vollhardt) is available in open access.
+- n: 111
+  year: 2024
+  title: 'Computational quantum transport: a scattering approach perspective'
+  authors: Xavier Waintal, Michael Wimmer, Anton Akhmerov, Christoph Groth, Branislav K. Nikolic, Mathieu Istas, Tómas Örn Rosdahl, and Daniel Varjas
+  journal: Submitted to SciPost Phys.
+  arxiv: '2407.16257'
+  abstract: 'This review is devoted to the different techniques that have been developed to compute the phase-coherent transport properties of quantum nanoelectronic systems connected to electrodes. Beside a review of the different algorithms proposed in the literature, we provide a comprehensive and pedagogical derivation of the two formalisms on which these techniques are based: the scattering approach and the (nonequilibrium) Green''s function approach. We show that the scattering problem can be formulated as a system of linear equations and that different existing algorithms for solving this scattering problem amount to different sequences of Gaussian elimination. We explicitly prove the equivalence of the two formalisms. We discuss the stability and numerical complexity of the existing methods. The review ends with a selection of a few applications where numerical calculations were instrumental in shaping our understanding of the physics.'
+- n: 110
+  year: 2024
+  title: Cross-extrapolation reconstruction of low-rank functions and application to quantum many-body observables in the strong coupling regime
+  authors: Matthieu Jeannin, Yuriel Núñez Fernández, Thomas Kloss, Olivier Parcollet, and Xavier Waintal
+  journal: Phys. Rev. B 110, 035124 (2024)
+  doi: 10.1103/physrevb.110.035124
+  arxiv: '2401.05547'
+  abstract: We present a general-purpose algorithm to extrapolate a low rank function of two variables from a small domain to a larger one. It is based on the cross-interpolation formula. We apply it to reconstruct physical quantities in some quantum many-body perturbative expansions in the real time Keldysh formalism, considered as a function of time $t$ and interaction $U$. These functions are of remarkably low rank. This property, combined with the convergence of the perturbative expansion in $U$ both at finite $t$ (for any $U$), and small $U$ (for any $t$), is sufficient for our algorithm to reconstruct the physical quantity at long time, strong coupling regime. Our method constitutes an alternative to standard resummation techniques in perturbative methods, such as diagrammatic Quantum Monte Carlo. We benchmark it on the single impurity Anderson model and show that it is successful even in some regime where standard conformal mapping resummation techniques fail.
+- n: 109
+  year: 2024
+  title: The quantum house of cards
+  authors: Xavier Waintal
+  journal: Proc. Natl. Acad. Sci. U.S.A. 121, e2313269120 (2024)
+  doi: 10.1073/pnas.2313269120
+  arxiv: '2312.17570'
+  abstract: Quantum computers have been proposed to solve a number of important problems such as discovering new drugs, new catalysts for fertilizer production, breaking encryption protocols, optimizing financial portfolios, or implementing new artificial intelligence applications. Yet, to date, a simple task such as multiplying 3 by 5 is beyond existing quantum hardware. This article examines the difficulties that would need to be solved for quantum computers to live up to their promises. I discuss the whole stack of technologies that has been envisioned to build a quantum computer from the top layers (the actual algorithms and associated applications) down to the very bottom ones (the quantum hardware, its control electronics, cryogeny, etc.) while not forgetting the crucial intermediate layer of quantum error correction.
+- n: 108
+  year: 2024
+  title: Quantics Tensor Cross Interpolation for High-Resolution Parsimonious Representations of Multivariate Functions
+  authors: Marc K. Ritter, Yuriel Núñez Fernández, Markus Wallerberger, Jan von Delft, Hiroshi Shinaoka, and Xavier Waintal
+  journal: Phys. Rev. Lett. 132, 056501 (2024)
+  doi: 10.1103/physrevlett.132.056501
+  arxiv: '2303.11819'
+  abstract: 'Multivariate functions of continuous variables arise in countless branches of science. Numerical computations with such functions typically involve a compromise between two contrary desiderata: accurate resolution of the functional dependence, versus parsimonious memory usage. Recently, two promising strategies have emerged for satisfying both requirements: (i) The quantics representation, which expresses functions as multi-index tensors, with each index representing one bit of a binary encoding of one of the variables; and (ii) tensor cross interpolation (TCI), which, if applicable, yields parsimonious interpolations for multi-index tensors. Here, we present a strategy, quantics TCI (QTCI), which combines the advantages of both schemes. We illustrate its potential with an application from condensed matter physics: the computation of Brillouin zone integrals.'
+- n: 107
+  year: 2024
+  title: Opening the Black Box inside Grover’s Algorithm
+  authors: E. M. Stoudenmire and Xavier Waintal
+  journal: Phys. Rev. X 14, 041029 (2024)
+  doi: 10.1103/physrevx.14.041029
+  arxiv: '2303.11317'
+  abstract: Grover's algorithm is a primary algorithm offered as evidence that quantum computers can provide an advantage over classical computers. It involves an "oracle" specified for a given application whose structure is not part of the formal scaling of the quadratic speedup guaranteed by the algorithm. Grover's algorithm also requires exponentially many calls to the quantum oracle to succeed (about $\sqrt{2^n}$ calls for $n$ qubits), raising the question of its implementation on both noisy and error-corrected quantum computers. In this work, we construct a quantum-inspired algorithm, executable on a classical computer, that performs Grover's task in a linear number of calls to (simulations of) the oracle - an exponentially smaller number than Grover's algorithm - and demonstrate this algorithm explicitly for Boolean satisfiability problems. The complexity of our algorithm depends on the cost to simulate the oracle once which may or may not be exponential. Indeed, Grover's algorithm does not have an a priori quantum speedup as soon as one is given access to the "source code" of the oracle. Our findings illustrate this point explicitly as our algorithm exploits the structure of the quantum circuit used to program the quantum computer to speed up the search. There remain problems where Grover's algorithm would provide an asymptotic speedup if it could be run accurately for large enough sizes. Our quantum-inspired algorithm provides lower bounds, in terms of circuit complexity, for quantum hardware to beat classical approaches for these problems. These estimates, combined with the unfavorable scaling of the success probability of Grover's algorithm - which in the presence of noise decays as a double exponential in the number of qubits - makes a practical speedup unrealistic even under extremely optimistic assumptions of the evolution of both hardware quality and availability.
+- n: 106
+  year: 2023
+  title: Reconstructing the potential configuration in a high-mobility semiconductor heterostructure with scanning gate microscopy
+  authors: Gaëtan J. Percebois, Antonio Lacerda-Santos, Boris Brun, Benoit Hackens, Xavier Waintal, and Dietmar Weinmann
+  journal: SciPost Phys. 15, 242 (2023)
+  doi: 10.21468/scipostphys.15.6.242
+  arxiv: '2308.13372'
+  abstract: The weak disorder potential seen by the electrons of a two-dimensional electron gas in high-mobility semiconductor heterostructures leads to fluctuations in the physical properties and can be an issue for nanodevices. In this paper, we show that a scanning gate microscopy (SGM) image contains information about the disorder potential, and that a machine learning approach based on SGM data can be used to determine the disorder. We reconstruct the electric potential of a sample from its experimental SGM data and validate the result through an estimate of its accuracy.
+- n: 105
+  year: 2023
+  title: Tensor train continuous time solver for quantum impurity models
+  authors: A. Erpenbeck, W. -T. Lin, T. Blommel, L. Zhang, S. Iskakov, L. Bernheimer, Y. Núñez Fernández, G. Cohen, O. Parcollet, X. Waintal, and E. Gull
+  journal: Phys. Rev. B 107, 245135 (2023)
+  doi: 10.1103/physrevb.107.245135
+  arxiv: '2303.11199'
+  abstract: The simulation of strongly correlated quantum impurity models is a significant challenge in modern condensed matter physics that has multiple important applications. Thus far, the most successful methods for approaching this challenge involve Monte Carlo techniques that accurately and reliably sample perturbative expansions to any order. However, the cost of obtaining high precision through these methods is high. Recently, tensor train decomposition techniques have been developed as an alternative to Monte Carlo integration. In this study, we apply these techniques to the single-impurity Anderson model at equilibrium by calculating the systematic expansion in power of the hybridization of the impurity with the bath. We demonstrate the performance of the method in a paradigmatic application, examining the first-order phase transition on the infinite dimensional Bethe lattice, which can be mapped to an impurity model through dynamical mean field theory. Our results indicate that using tensor train decomposition schemes allows the calculation of finite-temperature Green's functions and thermodynamic observables with unprecedented accuracy. The methodology holds promise for future applications to frustrated multi-orbital systems, using a combination of partially summed series with other techniques pioneered in diagrammatic and continuous-time quantum Monte Carlo.
+- n: 104
+  year: 2023
+  title: Coulomb-mediated antibunching of an electron pair surfing on sound
+  authors: Junliang Wang, Hermann Edlbauer, Aymeric Richard, Shunsuke Ota, Wanki Park, Jeongmin Shim, Arne Ludwig, Andreas Wieck, Heung-Sun Sim, Matias Urdampilleta, Tristan Meunier, Tetsuo Kodera, Nobu-Hisa Kaneko, Hermann Sellier, Xavier Waintal, Shintaro Takada, and Christopher Bäuerle
+  journal: Nat. Nanotechnol. 18, 721-726 (2023)
+  doi: 10.1038/s41565-023-01368-5
+  arxiv: '2210.03452'
+  abstract: Electron flying qubits are envisioned as potential information link within a quantum computer, but also promise -- alike photonic approaches -- a self-standing quantum processing unit. In contrast to its photonic counterpart, electron-quantum-optics implementations are subject to Coulomb interaction, which provide a direct route to entangle the orbital or spin degree of freedom. However, the controlled interaction of flying electrons at the single particle level has not yet been established experimentally. Here we report antibunching of a pair of single electrons that is synchronously shuttled through a circuit of coupled quantum rails by means of a surface acoustic wave. The in-flight partitioning process exhibits a reciprocal gating effect which allows us to ascribe the observed repulsion predominantly to Coulomb interaction. Our single-shot experiment marks an important milestone on the route to realise a controlled-phase gate for in-flight quantum manipulations.
+- n: 103
+  year: 2023
+  title: Density-Matrix Renormalization Group Algorithm for Simulating Quantum Circuits with a Finite Fidelity
+  authors: Thomas Ayral, Thibaud Louvet, Yiqing Zhou, Cyprien Lambert, E. Miles Stoudenmire, and Xavier Waintal
+  journal: PRX Quantum 4, 020304 (2023)
+  doi: 10.1103/prxquantum.4.020304
+  arxiv: '2207.05612'
+  abstract: We develop a density-matrix renormalization group (DMRG) algorithm for the simulation of quantum circuits. This algorithm can be seen as the extension of time-dependent DMRG from the usual situation of hermitian Hamiltonian matrices to quantum circuits defined by unitary matrices. For small circuit depths, the technique is exact and equivalent to other matrix product state (MPS) based techniques. For larger depths, it becomes approximate in exchange for an exponential speed up in computational time. Like an actual quantum computer, the quality of the DMRG results is characterized by a finite fidelity. However, unlike a quantum computer, the fidelity depends strongly on the quantum circuit considered. For the most difficult possible circuit for this technique, the so-called "quantum supremacy" benchmark of Google Inc. , we find that the DMRG algorithm can generate bit strings of the same quality as the seminal Google experiment on a single computing core. For a more structured circuit used for combinatorial optimization (Quantum Approximate Optimization Algorithm or QAOA), we find a drastic improvement of the DMRG results with error rates dropping by a factor of 100 compared with random quantum circuits. Our results suggest that the current bottleneck of quantum computers is their fidelities rather than the number of qubits.
+- n: 102
+  year: 2022
+  title: Learning Feynman Diagrams with Tensor Trains
+  authors: Yuriel Núñez Fernández, Matthieu Jeannin, Philipp T. Dumitrescu, Thomas Kloss, Jason Kaye, Olivier Parcollet, and Xavier Waintal
+  journal: Phys. Rev. X 12, 041018 (2022)
+  doi: 10.1103/physrevx.12.041018
+  arxiv: '2207.06135'
+  abstract: 'We use tensor network techniques to obtain high order perturbative diagrammatic expansions for the quantum many-body problem at very high precision. The approach is based on a tensor train parsimonious representation of the sum of all Feynman diagrams, obtained in a controlled and accurate way with the tensor cross interpolation algorithm. It yields the full time evolution of physical quantities in the presence of any arbitrary time dependent interaction. Our benchmarks on the Anderson quantum impurity problem, within the real time non-equilibrium Schwinger-Keldysh formalism, demonstrate that this technique supersedes diagrammatic Quantum Monte Carlo by orders of magnitude in precision and speed, with convergence rates $1/N^2$ or faster, where N is the number of function evaluations. The method also works in parameter regimes characterized by strongly oscillatory integrals in high dimension, which suffer from a catastrophic sign problem in Quantum Monte-Carlo. Finally, we also present two exploratory studies showing that the technique generalizes to more complex situations: a double quantum dot and a single impurity embedded in a two dimensional lattice.'
+- n: 101
+  year: 2022
+  title: 'Semiconductor-based electron flying qubits: review on recent progress accelerated by numerical modelling'
+  authors: Hermann Edlbauer, Junliang Wang, Thierry Crozes, Pierre Perrier, Seddik Ouacel, Clément Geffroy, Giorgos Georgiou, Eleni Chatzikyriakou, Antonio Lacerda-Santos, Xavier Waintal, D. Christian Glattli, Preden Roulleau, Jayshankar Nath, Masaya Kataoka, Janine Splettstoesser, Matteo Acciai, Maria Cecilia da Silva Figueira, Kemal Öztas, Alex Trellakis, Thomas Grange, Oleg M. Yevtushenko, Stefan Birner, and Christopher Bäuerle
+  journal: EPJ Quantum Technol. 9, 21 (2022)
+  doi: 10.1140/epjqt/s40507-022-00139-w
+  arxiv: '2207.01318'
+  abstract: 'The progress of charge manipulation in semiconductor-based nanoscale devices opened up a novel route to realise a flying qubit with a single electron. In the present review, we introduce the concept of these electron flying qubits, discuss their most promising realisations and show how numerical simulations are applicable to accelerate experimental development cycles. Addressing the technological challenges of flying qubits that are currently faced by academia and quantum enterprises, we underline the relevance of interdisciplinary cooperation to move emerging quantum industry forward. The review consists of two main sections: Pathways towards the electron flying qubit: We address three routes of single-electron transport in GaAs-based devices focusing on surface acoustic waves, hot-electron emission from quantum dot pumps and Levitons. For each approach, we discuss latest experimental results and point out how numerical simulations facilitate engineering the electron flying qubit. Numerical modelling of quantum devices: We review the full stack of numerical simulations needed for fabrication of the flying qubits. Choosing appropriate models, examples of basic quantum mechanical simulations are explained in detail. We discuss applications of open-source (KWANT) and the commercial (nextnano) platforms for modelling the flying qubits. The discussion points out the large relevance of software tools to design quantum devices tailored for efficient operation.'
+- n: 100
+  year: 2022
+  title: 'Unveiling the charge distribution of a GaAs-based nanoelectronic device: A large experimental dataset approach'
+  authors: Eleni Chatzikyriakou, Junliang Wang, Lucas Mazzella, Antonio Lacerda-Santos, Maria Cecilia da Silva Figueira, Alex Trellakis, Stefan Birner, Thomas Grange, Christopher Bäuerle, and Xavier Waintal
+  journal: Phys. Rev. Research 4, 043163 (2022)
+  doi: 10.1103/physrevresearch.4.043163
+  arxiv: '2205.00846'
+  abstract: In quantum nanoelectronics, numerical simulations have become an ubiquitous tool. Yet the comparison with experiments is often done at a qualitative level or restricted to a single device with a handful of fitting parameters. In this work, we assess the predictive power of these simulations by comparing the results of a single model with a large experimental data set of 110 devices with 48 different geometries. The devices are quantum point contacts of various shapes and sizes made with electrostatic gates deposited on top of a high mobility GaAs/GaAlAs two dimensional electron gas. We study the pinch-off voltages applied on the gates to deplete the two-dimensional electron gas in various spatial positions. We argue that the pinch-off voltages are a very robust signature of the charge distribution in the device. The large experimental data set allows us to critically review the modeling and arrive at a robust one-parameter model that can be calibrated in situ, a crucial step for making predictive simulations.
+- n: 99
+  year: 2022
+  title: Positioning of edge states in a quantum Hall graphene pn junction
+  authors: I. M. Flór, A. Lacerda-Santos, G. Fleury, P. Roulleau, and X. Waintal
+  journal: Phys. Rev. B 105, L241409 (2022)
+  doi: 10.1103/physrevb.105.l241409
+  arxiv: '2201.12025'
+  abstract: Recent experiments have shown that electronic Mach-Zehnder interferometers of unprecedented fidelities could be built using a graphene pn junction in the quantum Hall regime. In these junctions, two different edge states corresponding to two different valley configurations are spatially separated and form the two arms of the interferometer. The observed separation, of several tens of nanometers, has been found to be abnormally high and thus associated to unrealistic values of the exchange interaction. In this work, we show that, although the separation is due to exchange interaction, its actual value is entirely governed by the sample geometry and independent of the value of the exchange splitting. Our analysis follows the lines of the classical work of Chklovski-Shklovskii- Glazman on electrostatically induced edge state reconstruction and includes quantitative numerical calculations in the experimental geometries.
+- n: 98
+  year: 2021
+  title: Quantum quasi Monte Carlo algorithm for out-of-equilibrium Green functions at long times
+  authors: Corentin Bertrand, Daniel Bauernfeind, Philipp T. Dumitrescu, Marjan Maček, Xavier Waintal, and Olivier Parcollet
+  journal: Phys. Rev. B 103, 155104 (2021)
+  doi: 10.1103/physrevb.103.155104
+  arxiv: '2012.02803'
+  abstract: We extend the recently developed Quantum Quasi-Monte Carlo (QQMC) approach to obtain the full frequency dependence of Green functions in a single calculation. QQMC is a general approach for calculating high-order perturbative expansions in power of the electron-electron interaction strength. In contrast to conventional Markov chain Monte Carlo sampling, QQMC uses low-discrepancy sequences for a more uniform sampling of the multi-dimensional integrals involved and can potentially outperform Monte Carlo by several orders of magnitudes. A core concept of QQMC is the a priori construction of a "model function" that approximates the integrand and is used to optimize the sampling distribution. In this paper, we show that the model function concept extends to a kernel approach for the computation of Green functions. We illustrate the approach on the Anderson impurity model and show that the scaling of the error with the number of integrand evaluations $N$ is $\sim 1/N^{0.86}$ in the best cases, and comparable to Monte Carlo scaling $\sim 1/N^{0.5}$ in the worst cases. We find a systematic improvement over Monte Carlo sampling by at least two orders of magnitude while using a basic form of model function. Finally, we compare QQMC results with calculations performed with the Fork Tensor Product State (FTPS) method, a recently developed tensor network approach for solving impurity problems. Applying a simple Padé approximant for the series resummation, we find that QQMC matches the FTPS results beyond the perturbative regime.
+- n: 97
+  year: 2021
+  title: 'Tkwant: a software package for time-dependent quantum transport'
+  authors: Thomas Kloss, Joseph Weston, Benoit Gaury, Benoit Rossignol, Christoph Groth, and Xavier Waintal
+  journal: New J. Phys. 23, 023025 (2021)
+  doi: 10.1088/1367-2630/abddf7
+  arxiv: '2009.03132'
+  abstract: 'Tkwant is a Python package for the simulation of quantum nanoelectronics devices to which external time-dependent perturbations are applied. Tkwant is an extension of the Kwant package (https://kwant-project.org/) and can handle the same types of systems: discrete tight-binding-like models that consist of an arbitrary central region connected to semi-infinite electrodes. The problem is genuinely many-body even in the absence of interactions and is treated within the non-equilibrium Keldysh formalism. Examples of Tkwant applications include the propagation of plasmons generated by voltage pulses, propagation of excitations in the quantum Hall regime, spectroscopy of Majorana fermions in semiconducting nanowires, current-induced skyrmion motion in spintronic devices, multiple Andreev reflection, Floquet topological insulators, thermoelectric effects, and more. The code has been designed to be easy to use and modular. Tkwant is free software distributed under a BSD license and can be found at https://tkwant.kwant-project.org/.'
+- n: 96
+  year: 2021
+  title: Measurement of the Spin Absorption Anisotropy in Lateral Spin Valves
+  authors: Maxen Cosset-Chéneau, Laurent Vila, Gilles Zahnd, Daria Gusakova, Van Tuong Pham, Cécile Grèzes, Xavier Waintal, Alain Marty, Henri Jaffrès, and Jean-Philippe Attané
+  journal: Phys. Rev. Lett. 126, 027201 (2021)
+  doi: 10.1103/physrevlett.126.027201
+  arxiv: '2007.14058'
+  abstract: The spin absorption process in a ferromagnetic material depends on the spin orientation relativelyto the magnetization. Using a ferromagnet to absorb the pure spin current created within a lateralspin-valve, we evidence and quantify a sizeable orientation dependence of the spin absorption inCo, CoFe and NiFe. These experiments allow determining the spin-mixing conductance, an elusivebut fundamental parameter of the spin-dependent transport. We show that the obtained valuescannot be understood within a model considering only the Larmor, transverse decoherence and spindiffusion lengths, and rather suggest that the spin-mixing conductance is actually limited by theSharvin conductance.
+- n: 95
+  year: 2021
+  title: 'Low-symmetry topological materials for large charge-to-spin interconversion: The case of transition metal dichalcogenide monolayers'
+  authors: Marc Vila, Chuang-Han Hsu, Jose H. Garcia, L. Antonio Benítez, Xavier Waintal, Sergio Valenzuela, Vitor M. Pereira, and Stephan Roche
+  journal: Phys. Rev. Research 3, 043230 (2021)
+  doi: 10.1103/physrevresearch.3.043230
+  arxiv: '2007.02053'
+  abstract: The spin polarization induced by the spin Hall effect (SHE) in thin films typically points out of the plane. This is rooted on the specific symmetries of traditionally studied systems, not in a fundamental constraint. Recently, experiments on few-layer ${\rm MoTe}_2$ and ${\rm WTe}_2$ showed that the reduced symmetry of these strong spin-orbit coupling materials enables a new form of {\it canted} spin Hall effect, characterized by concurrent in-plane and out-of-plane spin polarizations. Here, through quantum transport calculations on realistic device geometries, including disorder, we predict a very large gate-tunable SHE figure of merit $λ_sθ_{xy}\sim 1\text{--}50$ nm in ${\rm MoTe}_2$ and ${\rm WTe}_2$ monolayers that significantly exceeds values of conventional SHE materials. This stems from a concurrent long spin diffusion length ($λ_s$) and charge-to-spin interconversion efficiency as large as $θ_{xy} \approx 80$\%, originating from momentum-invariant (persistent) spin textures together with large spin Berry curvature along the Fermi contour, respectively. Generalization to other materials and specific guidelines for unambiguous experimental confirmation are proposed, paving the way towards exploiting such phenomena in spintronic devices. These findings vividly emphasize how crystal symmetry and electronic topology can govern the intrinsic SHE and spin relaxation, and how they may be exploited to broaden the range and efficiency of spintronic materials and functionalities.
+- n: 94
+  year: 2020
+  title: Canted Persistent Spin Texture and Quantum Spin Hall Effect in WTe₂
+  authors: Jose H. Garcia, Marc Vila, Chuang-Han Hsu, Xavier Waintal, Vitor M. Pereira, and Stephan Roche
+  journal: Phys. Rev. Lett. 125, 256603 (2020)
+  doi: 10.1103/physrevlett.125.256603
+  arxiv: '2007.05626'
+  abstract: We report an unconventional quantum spin Hall phase in the monolayer T$_\text{d}$-WTe$_2$, which exhibits hitherto unknown features in other topological materials. The low-symmetry of the structure induces a canted spin texture in the $yz$ plane, which dictates the spin polarization of topologically protected boundary states. Additionally, the spin Hall conductivity gets quantized ($2e^2/h$) with a spin quantization axis parallel to the canting direction. These findings are based on large-scale quantum simulations of the spin Hall conductivity tensor and nonlocal resistances in multi-probe geometries using a realistic tight-binding model elaborated from first-principle methods. The observation of this canted quantum spin Hall effect, related to the formation of topological edge states with nontrivial spin polarization, demands for specific experimental design and suggests interesting alternatives for manipulating spin information in topological materials.
+- n: 93
+  year: 2020
+  title: Quantum Quasi-Monte Carlo Technique for Many-Body Perturbative Expansions
+  authors: Marjan Maček, Philipp T. Dumitrescu, Corentin Bertrand, Bill Triggs, Olivier Parcollet, and Xavier Waintal
+  journal: Phys. Rev. Lett. 125, 047702 (2020)
+  doi: 10.1103/physrevlett.125.047702
+  arxiv: '2002.12372'
+  abstract: High order perturbation theory has seen an unexpected recent revival for controlled calculations of quantum many-body systems, even at strong coupling. We adapt integration methods using low-discrepancy sequences to this problem. They greatly outperform state-of-the-art diagrammatic Monte Carlo. In practical applications, we show speed-ups of several orders of magnitude with scaling as fast as $1/N$ in sample number $N$; parametrically faster than $1/\sqrt{N}$ in Monte Carlo. We illustrate our technique with a solution of the Kondo ridge in quantum dots, where it allows large parameter sweeps.
+- n: 92
+  year: 2020
+  title: What Limits the Simulation of Quantum Computers?
+  authors: Yiqing Zhou, E. Miles Stoudenmire, and Xavier Waintal
+  journal: Phys. Rev. X 10, 041038 (2020)
+  doi: 10.1103/physrevx.10.041038
+  arxiv: '2002.07730'
+  abstract: 'It is imperative that useful quantum computers be very difficult to simulate classically; otherwise classical computers could be used for the applications envisioned for the quantum ones. Perfect quantum computers are unarguably exponentially difficult to simulate: the classical resources required grow exponentially with the number of qubits $N$ or the depth $D$ of the circuit. Real quantum computing devices, however, are characterized by an exponentially decaying fidelity $\mathcal{F} \sim (1-ε)^{ND}$ with an error rate $ε$ per operation as small as $\approx 1\%$ for current devices. In this work, we demonstrate that real quantum computers can be simulated at a tiny fraction of the cost that would be needed for a perfect quantum computer. Our algorithms compress the representations of quantum wavefunctions using matrix product states (MPS), which capture states with low to moderate entanglement very accurately. This compression introduces a finite error rate $ε$ so that the algorithms closely mimic the behavior of real quantum computing devices. The computing time of our algorithm increases only linearly with $N$ and $D$. We illustrate our algorithms with simulations of random circuits for qubits connected in both one and two dimensional lattices. We find that $ε$ can be decreased at a polynomial cost in computing power down to a minimum error $ε_\infty$. Getting below $ε_\infty$ requires computing resources that increase exponentially with $ε_\infty/ε$. For a two dimensional array of $N=54$ qubits and a circuit with Control-Z gates, error rates better than state-of-the-art devices can be obtained on a laptop in a few hours. For more complex gates such as a swap gate followed by a controlled rotation, the error rate increases by a factor three for similar computing time.'
+- n: 91
+  year: 2020
+  title: Design of a Single-Shot Electron detector with sub-electron sensitivity for electron flying qubit operation
+  authors: D. C. Glattli, J. Nath, I. Taktak, P. Roulleau, C. Bäuerle, and X. Waintal
+  journal: Preprint
+  arxiv: '2002.03947'
+  abstract: The recent realization of coherent single-electron sources in ballistic conductors let us envision performing time-resolved electronic interferometry experiments analogous to quantum optics experiments.One could eventually use propagating electronic excitations as flying qubits. However an important missing brick is the single-shot electron detection which would enable a complete quantum information operation with flying qubits. Here, we propose and discuss the design of a single charge detector able to achieve in-flight detection of electron flying qubits. Its sub-electron sensitivity would allow the detection of the fractionally charged flying anyons of the Fractional Quantum Hall Effect and would enable the detection of anyonic statistics using coincidence measurements.
+- n: 90
+  year: 2020
+  title: Nonlocal Spin Dynamics in the Crossover from Diffusive to Ballistic Transport
+  authors: Marc Vila, Jose H. Garcia, Aron W. Cummings, Stephen R. Power, Christoph W. Groth, Xavier Waintal, and Stephan Roche
+  journal: Phys. Rev. Lett. 124, 196602 (2020)
+  doi: 10.1103/physrevlett.124.196602
+  arxiv: '1910.06194'
+  abstract: Improved fabrication techniques have enabled the possibility of ballistic transport and unprecedented spin manipulation in ultraclean graphene devices. Spin transport in graphene is typically probed in a nonlocal spin valve and is analyzed using spin diffusion theory, but this theory is not necessarily applicable when charge transport becomes ballistic or when the spin diffusion length is exceptionally long. Here, we study these regimes by performing quantum simulations of graphene nonlocal spin valves. We find that conventional spin diffusion theory fails to capture the crossover to the ballistic regime as well as the limit of long spin diffusion length. We show that the latter can be described by an extension of the current theoretical framework. Finally, by covering the whole range of spin dynamics, our study opens a new perspective to predict and scrutinize spin transport in graphene and other two-dimensional material-based ultraclean devices.
+- n: 89
+  year: 2020
+  title: Reconciling edge states with compressible stripes in a ballistic mesoscopic conductor
+  authors: Pacome Armagnat and Xavier Waintal
+  journal: J. Phys. Mater. 3, 02LT01 (2020)
+  doi: 10.1088/2515-7639/ab7582
+  arxiv: '1903.05028'
+  abstract: The well-known Landauer-Buttiker (LB) picture used to explain the quantum Hall effect uses the concept of (chiral) edge states that carry the current. In their seminal 1992 article, Chklovskii, Shklovskii and Glazman (CSG) showed that the LB picture does not account for some very basic properties of the gas, such as its density profile, as it lacks a proper treatment of the electrostatic energy. They showed that, instead, one should consider alternated stripes of compressible and incompressible phases. In this letter, we revisit this issue using a full solution of the quantum-electrostatic problem of a narrow ballistic conductor, beyond the CSG approach. We recover the LB channels at low field and the CSG compressible/incompressible stripes at high field. Our calculations reveal the existence of a third "hybrid" phase at intermediate field. This hybrid phase has well defined LB type edge states, yet possesses a Landau level pinned at the Fermi energy as in the CSG picture. We calculate the magneto-conductance which reveals the interplay between the LB and CSG regimes. Our results have important implications for the propagation of edge magneto-plasmons.
+- n: 88
+  year: 2020
+  title: Unveiling multiferroic proximity effect in graphene
+  authors: Fatima Ibrahim, Ali Hallal, Daniel Solis Lerma, Xavier Waintal, Evgeny Y. Tsymbal, and Mairbek Chshiev
+  journal: 2D Mater. 7, 015020 (2020)
+  doi: 10.1088/2053-1583/ab5319
+  arxiv: '1909.02844'
+  abstract: We demonstrate that electronic and magnetic properties of graphene can be tuned via proximity of multiferroic substrate. Our first-principles calculations performed both with and without spin-orbit coupling clearly show that by contacting graphene with bismuth ferrite BiFeO$_3$ (BFO) film, the spin-dependent electronic structure of graphene is strongly impacted both by the magnetic order and by electric polarization in the underlying BFO. Based on extracted Hamiltonian parameters obtained from the graphene band structure, we propose a concept of six-resistance device based on exploring multiferroic proximity effect giving rise to significant proximity electro- (PER), magneto- (PMR), and multiferroic (PMER) resistance effects. This finding paves a way towards multiferroic control of magnetic properties in two dimensional materials.
+- n: 87
+  year: 2019
+  title: Pushing the limit of quantum transport simulations
+  authors: Mathieu Istas, Christoph Groth, and Xavier Waintal
+  journal: Phys. Rev. Research 1, 033188 (2019)
+  doi: 10.1103/physrevresearch.1.033188
+  arxiv: '1906.09210'
+  abstract: 'Simulations of quantum transport in coherent conductors have evolved into mature techniques that are used in fields of physics ranging from electrical engineering to quantum nanoelectronics and material science. The most efficient general-purpose algorithms have a computational cost that scales as $L^{6 \dots 7}$ in 3D, which on the one hand is a substantial improvement over older algorithms, but on the other hand still severely restricts the size of the simulation domain, limiting the usefulness of simulations through strong finite-size effects. Here, we present a novel class of algorithms that, for certain systems, allows to directly access the thermodynamic limit. Our approach, based on the Green''s function formalism for discrete models, targets systems which are mostly invariant by translation, i.e. invariant by translation up to a finite number of orbitals and/or quasi-1D electrodes and/or the presence of edges or surfaces. Our approach is based on an automatic calculation of the poles and residues of series expansions of the Green''s function in momentum space. This expansion allows to integrate analytically in one momentum variable. We illustrate our algorithms with several applications: devices with graphene electrodes that consist of half an infinite sheet; Friedel oscillation calculations of infinite 2D systems in presence of an impurity; quantum spin Hall physics in presence of an edge; the surface of a Weyl semi-metal in presence of impurities and electrodes connected to the surface. In this last example, we study the conduction through the Fermi arcs of the topological material and its resilience to the presence of disorder. Our approach provides a practical route for simulating 3D bulk systems or surfaces as well as other setups that have so far remained elusive.'
+- n: 86
+  year: 2019
+  title: Sound-driven single-electron transfer in a circuit of coupled quantum rails
+  authors: Shintaro Takada, Hermann Edlbauer, Hugo V. Lepage, Junliang Wang, Pierre-André Mortemousque, Giorgos Georgiou, Crispin H. W. Barnes, Chris J. B. Ford, Mingyun Yuan, Paulo V. Santos, Xavier Waintal, Arne Ludwig, Andreas D. Wieck, Matias Urdampilleta, Tristan Meunier, and Christopher Bäuerle
+  journal: Nat. Commun. 10, 4557 (2019)
+  doi: 10.1038/s41467-019-12514-w
+  arxiv: '1903.00684'
+  abstract: Surface acoustic waves (SAWs) strongly modulate the shallow electric potential in piezoelectric materials. In semiconductor heterostructures such as GaAs/AlGaAs, SAWs can thus be employed to transfer individual electrons between distant quantum dots. This transfer mechanism makes SAW technologies a promising candidate to convey quantum information through a circuit of quantum logic gates. Here we present two essential building blocks of such a SAW-driven quantum circuit. First, we implement a directional coupler allowing to partition a flying electron arbitrarily into two paths of transportation. Second, we demonstrate a triggered single-electron source enabling synchronisation of the SAW-driven sending process. Exceeding a single-shot transfer efficiency of 99 %, we show that a SAW-driven integrated circuit is feasible with single electrons on a large scale. Our results pave the way to perform quantum logic operations with flying electron qubits.
+- n: 85
+  year: 2019
+  title: Reconstructing Nonequilibrium Regimes of Quantum Many-Body Systems from the Analytical Structure of Perturbative Expansions
+  authors: Corentin Bertrand, Serge Florens, Olivier Parcollet, and Xavier Waintal
+  journal: Phys. Rev. X 9, 041008 (2019)
+  doi: 10.1103/physrevx.9.041008
+  arxiv: '1903.11646'
+  abstract: 'We propose a systematic approach to the non-equilibrium dynamics of strongly interacting many-body quantum systems, building upon the standard perturbative expansion in the Coulomb interaction. High order series are derived from the Keldysh version of determinantal diagrammatic Quantum Monte Carlo, and the reconstruction beyond the weak coupling regime of physical quantities is obtained by considering them as analytic functions of a complex-valued interaction $U$. Our advances rely on two crucial ingredients: i) a conformal change of variable, based on the approximate location of the singularities of these functions in the complex $U$-plane; ii) a Bayesian inference technique, that takes into account additional known non-perturbative relations, in order to control the amplification of noise occurring at large $U$. This general methodology is applied to the strongly correlated Anderson quantum impurity model, and is thoroughly tested both in- and out-of-equilibrium. In the situation of a finite voltage bias, our method is able to extend previous studies, by bridging with the regime of unitary conductance, and by dealing with energy offsets from particle-hole symmetry. We also confirm the existence of a voltage splitting of the impurity density of states, and find that it is tied to a non-trivial behavior of the non-equilibrium distribution function. Beyond impurity problems, our approach could be directly applied to Hubbard-like models, as well as other types of expansions.'
+- n: 84
+  year: 2019
+  title: Quantum Monte Carlo algorithm for out-of-equilibrium Green's functions at long times
+  authors: Corentin Bertrand, Olivier Parcollet, Antoine Maillard, and Xavier Waintal
+  journal: Phys. Rev. B 100, 125129 (2019)
+  doi: 10.1103/physrevb.100.125129
+  arxiv: '1903.11636'
+  abstract: 'We present a quantum Monte-Carlo algorithm for computing the perturbative expansion in power of the coupling constant $U$ of the out-of-equilibrium Green''s functions of interacting Hamiltonians of fermions. The algorithm extends the one presented in Phys. Rev. B 91 245154 (2015), and inherits its main property: it can reach the infinite time (steady state) limit since the computational cost to compute order $U^n$ is uniform versus time; the computing time increases as $2^n$. The algorithm is based on the Schwinger-Keldysh formalism and can be used for both equilibrium and out-of-equilibrium calculations. It is stable at both small and long real times including in the stationary regime, because of its automatic cancellation of the disconnected Feynman diagrams. We apply this technique to the Anderson quantum impurity model in the quantum dot geometry to obtain the Green''s function and self-energy expansion up to order $U^{10}$ at very low temperature. We benchmark our results at weak and intermediate coupling with high precision Numerical Renormalization Group (NRG) computations as well as analytical results.'
+- n: 83
+  year: 2019
+  title: Proximity magnetoresistance in graphene induced by magnetic insulators
+  authors: D. A. Solis, A. Hallal, X. Waintal, and M. Chshiev
+  journal: Phys. Rev. B 100, 104402 (2019)
+  doi: 10.1103/physrevb.100.104402
+  arxiv: '1906.04469'
+  abstract: We demonstrate the existence of Giant proximity magnetoresistance (PMR) effect in a graphene spin valve where spin polarization is induced by a nearby magnetic insulator. PMR calculations were performed for yttrium iron garnet (YIG), cobalt ferrite (CFO), and two europium chalcogenides EuO and EuS. We find a significant PMR (up to 100%) values defined as a relative change of graphene conductance with respect to parallel and antiparallel alignment of two proximity induced magnetic regions within graphene. Namely, for high Curie temperature (Tc) CFO and YIG insulators which are particularly important for applications, we obtain 22% and 77% at room temperature, respectively. For low Tc chalcogenides, EuO and EuS, the PMR is 100% in both cases. Furthermore, the PMR is robust with respect to system dimensions and edge type termination. Our findings show that it is possible to induce spin polarized currents in graphene with no direct injection through magnetic materials.
+- n: 82
+  year: 2019
+  title: The self-consistent quantum-electrostatic problem in strongly non-linear regime
+  authors: P. Armagnat, A. Lacerda-Santos, B. Rossignol, C. Groth, and X. Waintal
+  journal: SciPost Phys. 7, 031 (2019)
+  doi: 10.21468/scipostphys.7.3.031
+  arxiv: '1905.01271'
+  abstract: The self-consistent quantum-electrostatic (also known as Poisson-Schrödinger) problem is notoriously difficult in situations where the density of states varies rapidly with energy. At low temperatures, these fluctuations make the problem highly non-linear which renders iterative schemes deeply unstable. We present a stable algorithm that provides a solution to this problem with controlled accuracy. The technique is intrinsically convergent including in highly non-linear regimes. We illustrate our approach with (i) a calculation of the compressible and incompressible stripes in the integer quantum Hall regime and (ii) a calculation of the differential conductance of a quantum point contact geometry. Our technique provides a viable route for the predictive modeling of the transport properties of quantum nanoelectronics devices.
+- n: 81
+  year: 2019
+  title: Role of Quasiparticles in an Electric Circuit with Josephson Junctions
+  authors: Benoit Rossignol, Thomas Kloss, and Xavier Waintal
+  journal: Phys. Rev. Lett. 122, 207702 (2019)
+  doi: 10.1103/physrevlett.122.207702
+  arxiv: '1901.05700'
+  abstract: 'While Josephson junctions can be viewed as highly non-linear impedances for superconducting quantum technologies, they also possess internal dynamics that may strongly affect their behavior. Here, we construct a computational framework that includes a microscopic description of the junction (full fledged treatment of both the superconducting condensate and the quasi-particles) in presence of a surrounding electrical circuit. Our approach generalizes the standard ResistorCapacitor-Josephson model (RCJ) to arbitrary junctions (including e.g. multi-terminal geometries and/or junctions that embed topological or magnetic elements) and arbitrary electric circuits treated at the classical level. By treating the superconducting condensate and quasi-particles on equal footings, we capture non-equilibrium phenomena such as Multiple Andreev Reflection. We show that the interplay between the quasi-particle dynamics and the electrical environment leads to the emergence of new phenomena. In a RC circuit connected to single channel Josephson junction, we find out-of-equilibrium current-phase relations that are strongly distorted with respect to the (almost sinusoidal) equilibrium one, revealing the presence of high harmonic AC Josephson effect. In an RLC circuit connected to a junction, we find that the shape of the resonance is strongly modified by the quasi-particle dynamics: close to resonance, the current can be smaller than without the resonator. Our approach provides a route for the quantitative modeling of superconducting based circuits.'
+- n: 80
+  year: 2019
+  title: What determines the ultimate precision of a quantum computer
+  authors: Xavier Waintal
+  journal: Phys. Rev. A 99, 042318 (2019)
+  doi: 10.1103/physreva.99.042318
+  arxiv: '1702.07688'
+  abstract: A quantum error correction (QEC) code uses $N_{\rm c}$ quantum bits to construct one "logical" quantum bits of better quality than the original "physical" ones. QEC theory predicts that the failure probability $p_L$ of logical qubits decreases exponentially with $N_{\rm c}$ provided the failure probability $p$ of the physical qubit is below a certain threshold $p<p_{\rm th}$. In particular QEC theorems imply that the logical qubits can be made arbitrarily precise by simply increasing $N_{\rm c}$. In this letter, we search for physical mechanisms that lie outside of the hypothesis of QEC theorems and set a limit $η_{\rm L}$ to the precision of the logical qubits (irrespectively of $N_{\rm c}$). $η_{\rm L}$ directly controls the maximum number of operations $\propto 1/η_{\rm L}^2$ that can be performed before the logical quantum state gets randomized, hence the depth of the quantum circuits that can be considered. We identify a type of error - silent stabilizer failure - as a mechanism responsible for finite $η_{\rm L}$ and discuss its possible causes. Using the example of the topological surface code, we show that a single local event can provoke the failure of the logical qubit, irrespectively of $N_c$.
+- n: 79
+  year: 2018
+  title: Unveiling the bosonic nature of an ultrashort few-electron pulse
+  authors: Gregoire Roussely, Everton Arrighi, Giorgos Georgiou, Shintaro Takada, Martin Schalk, Matias Urdampilleta, Arne Ludwig, Andreas D. Wieck, Pacome Armagnat, Thomas Kloss, Xavier Waintal, Tristan Meunier, and Christopher Bäuerle
+  journal: Nat. Commun. 9, 2811 (2018)
+  doi: 10.1038/s41467-018-05203-7
+  arxiv: '1711.03509'
+  abstract: Quantum dynamics is very sensitive to dimensionality. While two-dimensional electronic systems form Fermi liquids, one-dimensional systems -- Tomonaga-Luttinger liquids -- are described by purely bosonic excitations, even though they are initially made of fermions. With the advent of coherent single-electron sources, the quantum dynamics of such a liquid is now accessible at the single-electron level. Here, we report on time-of-flight measurements of ultrashort few-electron charge pulses injected into a quasi one-dimensional quantum conductor. By changing the confinement potential we can tune the system from the one-dimensional Tomonaga-Luttinger liquid limit to the multi-channel Fermi liquid and show that the plasmon velocity can be varied over almost an order of magnitude. These results are in quantitative agreement with a parameter-free theory and demonstrate a powerful new probe for directly investigating real-time dynamics of fractionalisation phenomena in low-dimensional conductors.
+- n: 78
+  year: 2018
+  title: Toward flying qubit spectroscopy
+  authors: Benoit Rossignol, Thomas Kloss, Pacome Armagnat, and Xavier Waintal
+  journal: Phys. Rev. B 98, 205302 (2018)
+  doi: 10.1103/physrevb.98.205302
+  arxiv: '1802.05924'
+  abstract: While the coherent control of two level quantum systems ---qubits--- is now standard, their continuum electronic equivalents ---flying qubits--- are much less developed. A first step in this direction has been achieved in DC interferometry experiments. Here, we propose a simple setup to perform the second step, the spectroscopy of these flying qubits, by measuring the DC response to a high frequency AC voltage drive. Using two different concurring approaches --- Floquet theory and time-dependent simulations --- and three different models --- an analytical model, a simple microscopic model and a realistic microscopic model --- we predict the power-frequency map of the multi-terminal device. We argue that this spectroscopy provides a direct measurement of the flying qubit characteristic frequencies and a key validation for more advanced quantum manipulations.
+- n: 77
+  year: 2018
+  title: A general algorithm for computing bound states in infinite tight-binding systems
+  authors: M. Istas, C. Groth, A. R. Akhmerov, M. Wimmer, and X. Waintal
+  journal: SciPost Phys. 4, 026 (2018)
+  doi: 10.21468/scipostphys.4.5.026
+  arxiv: '1711.08250'
+  abstract: 'We propose a robust and efficient algorithm for computing bound states of infinite tight-binding systems that are made up of a finite scattering region connected to semi-infinite leads. Our method uses wave matching in close analogy to the approaches used to obtain propagating states and scattering matrices. We show that our algorithm is robust in presence of slowly decaying bound states where a diagonalization of a finite system would fail. It also allows to calculate the bound states that can be present in the middle of a continuous spectrum. We apply our technique to quantum billiards and the following topological materials: Majorana states in 1D superconducting nanowires, edge states in the 2D quantum spin Hall phase, and Fermi arcs in 3D Weyl semimetals.'
+- n: 76
+  year: 2018
+  title: Cooperative Charge Pumping and Enhanced Skyrmion Mobility
+  authors: Adel Abbout, Joseph Weston, Xavier Waintal, and Aurelien Manchon
+  journal: Phys. Rev. Lett. 121, 257203 (2018)
+  doi: 10.1103/physrevlett.121.257203
+  arxiv: '1804.02460'
+  abstract: The electronic pumping arising from the steady motion of ferromagnetic skyrmions is investigated by solving the time evolution of the Schrodinger equation implemented on a tight-binding model with the statistical physics of the many-body problem. It is shown that the ability of steadily moving skyrmions to pump large charge currents arises from their non-trivial magnetic topology, i.e. the coexistence between spin-motive force and topological Hall effect. Based on an adiabatic scattering theory, we compute the pumped current and demonstrate that it scales with the reflection coefficient of the conduction electrons against the skyrmion. Finally, we propose that such a phenomenon can be exploited in the context of racetrack devices, where the electronic pumping enhances the collective motion of the train of skyrmions.
+- n: 75
+  year: 2018
+  title: 'Coherent control of single electrons: a review of current progress'
+  authors: Christopher Bäuerle, D. Christian Glattli, Tristan Meunier, Fabien Portier, Patrice Roche, Preden Roulleau, Shintaro Takada, and Xavier Waintal
+  journal: Rep. Prog. Phys. 81, 056503 (2018)
+  doi: 10.1088/1361-6633/aaa98a
+  arxiv: '1801.07497'
+  abstract: In this report we review the present state of the art of the control of propagating quantum states at the single-electron level and its potential application to quantum information processing. We give an overview of the different approaches which have been developed over the last ten years in order to gain full control over a propagating single electron in a solid state system. After a brief introduction of the basic concepts, we present experiments on flying qubit circuits for ensemble of electrons measured in the low frequency (DC) limit. We then present the basic ingredients necessary to realise such experiments at the single-electron level. This includes a review of the various single electron sources which are compatible with integrated single electron circuits. This is followed by a review of recent key experiments on electron quantum optics with single electrons. Finally we will present recent developments about the new physics that emerges using ultrashort voltage pulses. We conclude our review with an outlook and future challenges in the field.
+- n: 74
+  year: 2018
+  title: Transient and Sharvin resistances of Luttinger liquids
+  authors: Thomas Kloss, Joseph Weston, and Xavier Waintal
+  journal: Phys. Rev. B 97, 165134 (2018)
+  doi: 10.1103/physrevb.97.165134
+  arxiv: '1710.00895'
+  abstract: 'Although the intrinsic conductance of an interacting one-dimensional system is renormalized by the electron-electron correlations, it has been known for some time that this renormalization is washed out by the presence of the (non-interacting) electrodes to which the wire is connected. Here, we study the transient conductance of such a wire: a finite voltage bias is suddenly applied across the wire and we measure the current before it has enough time to reach its stationary value. These calculations allow us to extract the Sharvin (contact) resistance of Luttinger and Fermi liquids. In particular, we find that a perfect junction between a Fermi liquid electrode and a Luttinger liquid electrode is characterized by a contact resistance that consists of half the quantum of conductance in series with half the intrinsic resistance of an infinite Luttinger liquid. These results were obtained using two different methods: a dynamical Hartree-Fock approach and a self-consistent Boltzmann approach. Although these methods are formally approximate we find a perfect match with the exact results of Luttinger/Fermi liquid theory.'
+- n: 73
+  year: 2017
+  title: Control of the Oscillatory Interlayer Exchange Interaction with Terahertz Radiation
+  authors: Uta Meyer, Geraldine Haack, Christoph Groth, and Xavier Waintal
+  journal: Phys. Rev. Lett. 118, 097701 (2017)
+  doi: 10.1103/physrevlett.118.097701
+  arxiv: '1610.03391'
+  abstract: The oscillatory interlayer exchange interaction between two magnetic layers separated by a metallic spacer is one of the few coherent quantum phenomena that persist at room temperature. Here we show that this interaction can be controlled dynamically by illuminating the sample (e.g. a spin valve) with radiation in the 10-100 THz range. We predict that the exchange interaction can be changed from ferromagnetic to anti-ferromagnetic (and vice versa) by tuning the amplitude and/or the frequency of the radiation. Our chief theoretical result is an expression that relates the dynamical exchange interaction to the static one that has already been extensively measured.
+- n: 72
+  year: 2017
+  title: Robust spin transfer torque in antiferromagnetic tunnel junctions
+  authors: Hamed Ben Mohamed Saidaoui, Xavier Waintal, and Aurélien Manchon
+  journal: Phys. Rev. B 95, 134424 (2017)
+  doi: 10.1103/physrevb.95.134424
+  arxiv: '1607.01523'
+  abstract: We theoretically study the current-induced spin torque in antiferromagnetic tunnel junctions, composed of two semi-infinite antiferromagnetic layers separated by a tunnel barrier, in both clean and disordered regimes. We find that the torque enabling the electrical manipulation of the Néel antiferromagnetic order parameter is out of plane $\sim {\bf n}\times{\bf p}$, while the torque competing with the antiferromagnetic exchange is in-plane $\sim {\bf n}\times({\bf p}\times{\bf n})$. Here, ${\bf { p}}$ and ${\bf { n}}$ are the Néel order parameter direction of the reference and free layers, respectively. Their bias dependence shows similar behavior as in ferromagnetic tunnel junctions, the in-plane torque being mostly linear in bias while the out-of-plane torque is quadratic. Most importantly, we find that the spin transfer torque in antiferromagnetic tunnel junctions is much more robust against disorder than in antiferromagnetic metallic spin-valves due to the tunneling nature of spin transport.
+- n: 71
+  year: 2016
+  title: Spin Hall Effect and Origins of Nonlocal Resistance in Adatom-Decorated Graphene
+  authors: Dinh Van Tuan, J. M. Marmolejo-Tejada, Xavier Waintal, Branislav K. Nikolić, Sergio O. Valenzuela, and Stephan Roche
+  journal: Phys. Rev. Lett. 117, 176602 (2016)
+  doi: 10.1103/physrevlett.117.176602
+  arxiv: '1603.03870'
+  abstract: "Recent experiments reporting unexpectedly large spin Hall effect (SHE) in graphene decorated with adatoms have raised a fierce controversy. We apply numerically exact Kubo and Landauer- B\x7Futtiker formulas to realistic models of gold-decorated disordered graphene (including adatom clustering) to obtain the spin Hall conductivity and spin Hall angle, as well as the nonlocal resistance as a quantity accessible to experiments. Large spin Hall angles of 0.1 are obtained at zero-temperature, but their dependence on adatom clustering differs from the predictions of semiclassical transport theories. Furthermore, we find multiple background contributions to the nonlocal resistance, some of which are unrelated to SHE or any other spin-dependent origin, as well as a strong suppression of SHE at room temperature. This motivates us to design a multiterminal graphene geometry which suppresses these background contributions and could, therefore, quantify the upper limit for spin current generation in two-dimensional materials."
+- n: 70
+  year: 2016
+  title: Towards realistic time-resolved simulations of quantum devices
+  authors: Joseph Weston and Xavier Waintal
+  journal: J. Comput. Electron. 15, 1148-1157 (2016)
+  doi: 10.1007/s10825-016-0855-9
+  arxiv: '1604.01198'
+  abstract: We report on our recent efforts to perform realistic simulations of large quantum devices in the time domain. In contrast to d.c. transport where the calculations are explicitly performed at the Fermi level, the presence of time-dependent terms in the Hamiltonian makes the system inelastic so that it is necessary to explicitly enforce the Pauli principle in the simulations. We illustrate our approach with calculations for a flying qubit interferometer, a nanoelectronic device that is currently under experimental investigation. Our calculations illustrate the fact that many degrees of freedom (16,700 tight-binding sites in the scattering region) and long simulation times (80,000 times the inverse Bandwidth of the tight-binding model) can be easily achieved on a local computer.
+- n: 69
+  year: 2016
+  title: Linear-scaling source-sink algorithm for simulating time-resolved quantum transport and superconductivity
+  authors: Joseph Weston and Xavier Waintal
+  journal: Phys. Rev. B 93, 134506 (2016)
+  doi: 10.1103/physrevb.93.134506
+  arxiv: '1510.05967'
+  abstract: 'We report on a "source-sink" algorithm which allows one to calculate time-resolved physical quantities from a general nanoelectronic quantum system (described by an arbitrary time-dependent quadratic Hamiltonian) connected to infinite electrodes. Although mathematically equivalent to the non equilibrium Green''s function formalism, the approach is based on the scattering wave functions of the system. It amounts to solving a set of generalized Schrödinger equations which include an additional "source" term (coming from the time dependent perturbation) and an absorbing "sink" term (the electrodes). The algorithm execution time scales linearly with both system size and simulation time allowing one to simulate large systems (currently around $10^6$ degrees of freedom) and/or large times (currently around $10^5$ times the smallest time scale of the system). As an application we calculate the current-voltage characteristics of a Josephson junction for both short and long junctions, and recover the multiple Andreev reflexion (MAR) physics. We also discuss two intrinsically time-dependent situations: the relaxation time of a Josephson junction after a quench of the voltage bias, and the propagation of voltage pulses through a Josephson junction. In the case of a ballistic, long Josephson junction, we predict that a fast voltage pulse creates an oscillatory current whose frequency is controlled by the Thouless energy of the normal part. A similar effect is found for short junctions, a voltage pulse produces an oscillating current which, in the absence of electromagnetic environment, does not relax.'
+- n: 68
+  year: 2016
+  title: Probing (topological) Floquet states through DC transport
+  authors: Michel Fruchart, Pierre Delplace, Joseph Weston, Xavier Waintal, and David Carpentier
+  journal: Physica E 75, 287-294 (2016)
+  doi: 10.1016/j.physe.2015.09.035
+  arxiv: '1507.00152'
+  abstract: We consider the differential conductance of a periodically driven system connected to infinite electrodes. We focus on the situation where the dissipation occurs predominantly in these electrodes. Using analytical arguments and a detailed numerical study we relate the differential conductances of such a system in two and three terminal geometries to the spectrum of quasi-energies of the Floquet operator. Moreover these differential conductances are found to provide an accurate probe of the existence of gaps in this quasi-energy spectrum, being quantized when topological edge states occur within these gaps. Our analysis opens the perspective to describe the intermediate time dynamics of driven mesoscopic conductors as topological Floquet filters.
+- n: 67
+  year: 2016
+  title: A computational approach to quantum noise in time-dependent nanoelectronic devices
+  authors: Benoit Gaury and Xavier Waintal
+  journal: Physica E 75, 72-76 (2016)
+  doi: 10.1016/j.physe.2015.09.009
+  arxiv: '1506.07408'
+  abstract: We derive simple expressions that relate the noise and correlation properties of a general time-dependent quantum conductor to the wave functions of the system. The formalism provides a practical route for numerical calculations of quantum noise in an externally driven system. We illustrate the approach with numerical calculations of the noise properties associated to a voltage pulse applied on a one-dimensional conductor. The methodology is however fully general and can be used for a large class of mesoscopic conductors.
+- n: 66
+  year: 2015
+  title: Direct probing of band-structure Berry phase in diluted magnetic semiconductors
+  authors: M. Granada, D. Lucot, R. Giraud, A. Lemaître, C. Ulysse, X. Waintal, and G. Faini
+  journal: Phys. Rev. B 91, 235203 (2015)
+  doi: 10.1103/physrevb.91.235203
+  arxiv: '1506.04044'
+  abstract: We report on experimental evidence of the Berry phase accumulated by the charge carrier wave function in single-domain nanowires made from a (Ga,Mn)(As,P) diluted ferromagnetic semiconductor layer. Its signature on the mesoscopic transport measurements is revealed as unusual patterns in the magnetoconductance, that are clearly distinguished from the universal conductance fluctuations. We show that these patterns appear in a magnetic field region where the magnetization rotates coherently and are related to a change in the band-structure Berry phase as the magnetization direction changes. They should be thus considered as a band structure Berry phase fingerprint of the effective magnetic monopoles in the momentum space. We argue that this is an efficient method to vary the band structure in a controlled way and to probe it directly. Hence, (Ga,Mn)As appears to be a very interesting test bench for new concepts based on this geometrical phase.
+- n: 65
+  year: 2015
+  title: Valley polarization assisted spin polarization in two dimensions
+  authors: V. T. Renard, B. A. Piot, X. Waintal, G. Fleury, D. Cooper, Y. Niida, D. Tregurtha, A. Fujiwara, Y. Hirayama, and K. Takashina
+  journal: Nat. Commun. 6, 7230 (2015)
+  doi: 10.1038/ncomms8230
+  arxiv: '1506.01813'
+  abstract: Valleytronics is rapidly emerging as an exciting area of basic and applied research. In two dimensional systems, valley polarisation can dramatically modify physical properties through electron-electron interactions as demonstrated by such phenomena as the fractional quantum Hall effect and the metal-insulator transition. Here, we address the electrons' spin alignment in a magnetic field in silicon-on-insulator quantum wells under valley polarisation. In stark contrast to expectations from a non-interacting model, we show experimentally that less magnetic field can be required to fully spin polarise a valley-polarised system than a valley-degenerate one. Furthermore, we show that these observations are quantitatively described by parameter free ab initio quantum Monte Carlo simulations. We interpret the results as a manifestation of the greater stability of the spin and valley degenerate system against ferromagnetic instability and Wigner crystalisation which in turn suggests the existence of a new strongly correlated electron liquid at low electron densities.
+- n: 64
+  year: 2015
+  title: Quantum Monte Carlo for correlated out-of-equilibrium nanoelectronic devices
+  authors: Rosario E. V. Profumo, Christoph Groth, Laura Messio, Olivier Parcollet, and Xavier Waintal
+  journal: Phys. Rev. B 91, 245154 (2015)
+  doi: 10.1103/physrevb.91.245154
+  arxiv: '1504.02132'
+  abstract: We present a simple, general purpose, quantum Monte-Carlo algorithm for out-of-equilibrium interacting nanoelectronics systems. It allows one to systematically compute the expansion of any physical observable (such as current or density) in powers of the electron-electron interaction coupling constant $U$. It is based on the out-of-equilibrium Keldysh Green's function formalism in real-time and corresponds to evaluating all the Feynman diagrams to a given order $U^n$ (up to $n=15$ in the present work). A key idea is to explicitly sum over the Keldysh indices in order to enforce the unitarity of the time evolution. The method can easily reach long time, stationary regimes, even at zero temperature. We then illustrate our approach with an application to the Anderson model, an archetype interacting mesoscopic system. We recover various results of the literature such as the spin susceptibility or the "Kondo ridge" in the current-voltage characteristics. In this case, we found the Monte-Carlo free of the sign problem even at zero temperature, in the stationary regime and in absence of particle-hole symmetry. The main limitation of the method is the lack of convergence of the expansion in $U$ for large $U$, i.e. a mathematical property of the model rather than a limitation of the Monte-Carlo algorithm. Standard extrapolation methods of divergent series can be used to evaluate the series in the strong correlation regime.
+- n: 63
+  year: 2015
+  title: Control of spin current by a magnetic YIG substrate in NiFe/Al nonlocal spin valves
+  authors: F. K. Dejene, N. Vlietstra, D. Luc, X. Waintal, J. Ben Youssef, and B. J. van Wees
+  journal: Phys. Rev. B 91, 100404 (2015)
+  doi: 10.1103/physrevb.91.100404
+  arxiv: '1503.06108'
+  abstract: We study the effect of a magnetic insulator (Yttrium Iron Garnet - YIG) substrate on the spin transport properties of Ni$_{80}$Fe$_{20}$/Al nonlocal spin valve (NLSV) devices. The NLSV signal on the YIG substrate is about 2 to 3 times lower than that on a non magnetic SiO$_2$ substrate, indicating that a significant fraction of the spin-current is absorbed at the Al/YIG interface. By measuring the NLSV signal for varying injector-to-detector distance and using a three dimensional spin-transport model that takes spin current absorption at the Al/YIG interface into account we obtain an effective spin-mixing conductance $G_{\uparrow\downarrow}\simeq 5 - 8\times 10^{13}~Ω^{-1}$m$^{-2}$. We also observe a small but clear modulation of the NLSV signal when rotating the YIG magnetization direction with respect to the fixed spin polarization of the spin accumulation in the Al. Spin relaxation due to thermal magnons or roughness of the YIG surface may be responsible for the observed small modulation of the NLSV signal.
+- n: 62
+  year: 2015
+  title: Manipulating Andreev and Majorana bound states with microwaves
+  authors: Joseph Weston, Benoit Gaury, and Xavier Waintal
+  journal: Phys. Rev. B 92, 020513 (2015)
+  doi: 10.1103/physrevb.92.020513
+  arxiv: '1411.6885'
+  abstract: We study the interplay between Andreev (Majorana) bound states that form at the boundary of a (topological) superconductor and a train of microwave pulses. We find that the extra dynamical phase coming from the pulses can shift the phase of the Andreev reflection, resulting in the appear- ance of dynamical Andreev states. As an application we study the presence of the zero bias peak in the differential conductance of a normal-topological superconductor junction - the simplest, yet somehow ambiguous, experimental signature for Majorana states. Adding microwave radiation to the measuring electrodes provides an unambiguous probe of the Andreev nature of the zero bias peak.
+- n: 61
+  year: 2015
+  title: 'Graphene spintronics: the European Flagship perspective'
+  authors: Stephan Roche, Johan Åkerman, Bernd Beschoten, Jean-Christophe Charlier, Mairbek Chshiev, Saroj Prasad Dash, Bruno Dlubak, Jaroslav Fabian, Albert Fert, Marcos Guimarães, Francisco Guinea, Irina Grigorieva, Christian Schönenberger, Pierre Seneor, Christoph Stampfer, Sergio O Valenzuela, Xavier Waintal, and Bart van Wees
+  journal: 2D Mater. 2, 030202 (2015)
+  doi: 10.1088/2053-1583/2/3/030202
+- n: 60
+  year: 2015
+  title: The a.c. Josephson effect without superconductivity
+  authors: Benoit Gaury, Joseph Weston, and Xavier Waintal
+  journal: Nat. Commun. 6, 6524 (2015)
+  doi: 10.1038/ncomms7524
+  arxiv: '1407.3911'
+  abstract: Superconductivity derives its most salient features from the coherence of its macroscopic wave function. The associated physical phenomena have now moved from exotic subjects to fundamental building blocks for quantum circuits such as qubits or single photonic modes. Here, we theoretically find that the AC Josephson effect---which transforms a DC voltage $V_b$ into an oscillating signal $cos(2eV_b t/ \hbar)$---has a mesoscopic counterpart in normal conductors. We show that on applying a DC voltage $V_b$ to an electronic interferometer, there exists a universal transient regime where the current oscillates at frequency $eV_b/h$. This effect is not limited by a superconducting gap and could, in principle, be used to produce tunable AC signals in the elusive $0.1-10$ THz "terahertz gap".
+- n: 59
+  year: 2014
+  title: Thermally driven magnetic precession in spin valves
+  authors: David Luc and Xavier Waintal
+  journal: Phys. Rev. B 90, 144430 (2014)
+  doi: 10.1103/physrevb.90.144430
+  arxiv: '1402.4725'
+  abstract: We investigate the angular dependence of the spin torque generated when applying a temperature difference across a spin-valve. Our study shows the presence of a non-trivial fixed point in this angular dependence, i.e. the possibility for a temperature gradient to stabilize radio frequency oscillations without the need for an external magnetic field. This so called "wavy" behavior can already be found upon applying a voltage difference across a spin-valve but we find that this effect is much more pronounced with a temperature difference. Our semi-classical theory is parametrized with experimentally measured parameters and allows one to predict the amplitude of the torque with good precision. Although thermal spin torque is by nature less effective than its voltage counterpart, we find that in certain geometries, temperature differences as low as a few degrees should be sufficient to trigger the switching of the magnetization.
+- n: 58
+  year: 2014
+  title: Stopping electrons with radio-frequency pulses in the quantum Hall regime
+  authors: Benoit Gaury, Joseph Weston, and Xavier Waintal
+  journal: Phys. Rev. B 90, 161305 (2014)
+  doi: 10.1103/physrevb.90.161305
+  arxiv: '1405.3520'
+  abstract: Most functionalities of modern electronic circuits rely on the possibility to modify the path fol- lowed by the electrons using, e.g. field effect transistors. Here we discuss the interplay between the modification of this path and the quantum dynamics of the electronic flow. Specifically, we study the propagation of charge pulses through the edge states of a two-dimensional electron gas in the quantum Hall regime. By sending radio-frequency (RF) excitations on a top gate capacitively coupled to the electron gas, we manipulate these edge state dynamically. We find that a fast RF change of the gate voltage can stop the propagation of the charge pulse inside the sample. This effect is intimately linked to the vanishing velocity of bulk states in the quantum Hall regime and the peculiar connection between momentum and transverse confinement of Landau levels. Our findings suggest new possibilities for stopping, releasing and switching the trajectory of charge pulses in quantum Hall systems.
+- n: 57
+  year: 2014
+  title: Classical and quantum spreading of a charge pulse
+  authors: Benoit Gaury, Joseph Weston, Christoph Groth, and Xavier Waintal
+  journal: Proceedings of IWCE 2014 (IEEE) (2014)
+  doi: 10.1109/iwce.2014.6865808
+  arxiv: '1406.7232'
+  abstract: With the technical progress of radio-frequency setups, high frequency quantum transport experiments have moved from theory to the lab. So far the standard theoretical approach used to treat such problems numerically--known as Keldysh or NEGF (Non Equilibrium Green's Functions) formalism--has not been very successful mainly because of a prohibitive computational cost. We propose a reformulation of the non-equilibrium Green's function technique in terms of the electronic wave functions of the system in an energy-time representation. The numerical algorithm we obtain scales now linearly with the simulated time and the volume of the system, and makes simulation of systems with 10^5 - 10^6 atoms/sites feasible. We illustrate our method with the propagation and spreading of a charge pulse in the quantum Hall regime. We identify a classical and a quantum regime for the spreading, depending on the number of particles contained in the pulse. This numerical experiment is the condensed matter analogue to the spreading of a Gaussian wavepacket discussed in quantum mechanics textbooks.
+- n: 56
+  year: 2014
+  title: 'Spin transfer torque in antiferromagnetic spin valves: From clean to disordered regimes'
+  authors: Hamed Ben Mohamed Saidaoui, Aurélien Manchon, and Xavier Waintal
+  journal: Phys. Rev. B 89, 174430 (2014)
+  doi: 10.1103/physrevb.89.174430
+  arxiv: '1403.6383'
+  abstract: Current-driven spin torques in metallic spin-valves composed of antiferromagnets are theoretically studied using the non-equilibrium Green's function method implemented on a tight-binding model. We focus our attention on G-type and L-type antiferromagnets in both clean and disordered regimes. In such structures, spin torques can either rotate the magnetic order parameter coherently (coherent torque) or compete with the internal antiferromagnetic exchange (exchange torque). We show that, depending on the symmetry of the spin-valve, the coherent and exchange torques can be either in the plane, α n\times(q \times n) or out of the plane α n \times q, where q and n are the directions of the order parameter of the polarizer and the free antiferromagnetic layers, respectively. Although disorder conserves the symmetry of the torques, it strongly reduces the torque magnitude, pointing out the need for momentum conservation to ensure strong spin torque in antiferromagnetic spin-valves
+- n: 55
+  year: 2014
+  title: Dynamical control of interference using voltage pulses in the quantum regime
+  authors: Benoit Gaury and Xavier Waintal
+  journal: Nat. Commun. 5, 3844 (2014)
+  doi: 10.1038/ncomms4844
+  arxiv: '1401.5280'
+  abstract: 'As a general trend, nanoelectronics experiments are shifting toward frequencies so high that they become comparable to the device''s internal characteristic time scales, resulting in new opportunities for studying the dynamical aspects of quantum mechanics. Here we theoretically study how a voltage pulse (in the quantum regime) propagates through an electronic interferometer (Fabry- Perot or Mach-Zehnder). We show that extremely fast pulses provide a conceptually new tool for manipulating quantum information: the possibility to dynamically engineer the interference pattern of a quantum system. Striking physical signatures are associated with this new regime: restoration of the interference in presence of large bias voltages; negative currents with respect to the direction of propagation of the voltage pulse; and oscillation of the total transmitted charge with the total number of injected electrons. The present findings have been made possible by the recent unlocking of our capability for simulating time-resolved quantum nanoelectronics of large systems.'
+- n: 54
+  year: 2014
+  title: Theoretical, numerical, and experimental study of a flying qubit electronic interferometer
+  authors: Tobias Bautze, Christoph Süssmeier, Shintaro Takada, Christoph Groth, Tristan Meunier, Michihisa Yamamoto, Seigo Tarucha, Xavier Waintal, and Christopher Bäuerle
+  journal: Phys. Rev. B 89, 125432 (2014)
+  doi: 10.1103/physrevb.89.125432
+  arxiv: '1312.5194'
+  abstract: We discuss an electronic interferometer recently measured by Yamamoto et al. This "flying quantum bit" experiment showed quantum oscillations between electronic trajectories of two tunnel-coupled wires connected via an Aharanov-Bohm ring. We present a simple scattering model as well as a numerical microscopic model to describe this experiment. In addition, we present new experimental data to which we confront our numerical results. While our analytical model provides basic concepts for designing the flying qubit device, we find that our numerical simulations allow to reproduce detailed features of the transport measurements such as in-phase and anti-phase oscillations of the two output currents as well as a smooth phase shift when sweeping a side gate. Furthermore, we find remarkable resemblance for the magneto conductance oscillations in both conductance and visibility between simulations and experiments within a specific parameter range.
+- n: 53
+  year: 2014
+  title: 'Kwant: a software package for quantum transport'
+  authors: Christoph W. Groth, Michael Wimmer, Anton R. Akhmerov, and Xavier Waintal
+  journal: New J. Phys. 16, 063065 (2014)
+  doi: 10.1088/1367-2630/16/6/063065
+  arxiv: '1309.2926'
+  abstract: 'Kwant is a Python package for numerical quantum transport calculations. It aims to be an user-friendly, universal, and high-performance toolbox for the simulation of physical systems of any dimensionality and geometry that can be described by a tight-binding model. Kwant has been designed such that the natural concepts of the theory of quantum transport (lattices, symmetries, electrodes, orbital/spin/electron-hole degrees of freedom) are exposed in a simple and transparent way: Defining a new simulation setup is very close to describing the corresponding mathematical model. Kwant offers direct support for calculations of transport properties (conductance, noise, scattering matrix), dispersion relations, modes, wave functions, various Green''s functions, and out-of-equilibrium local quantities. Other computations involving tight-binding Hamiltonians can be implemented easily thanks to its extensible and modular nature. Kwant is free software available at http://kwant-project.org/.'
+- n: 52
+  year: 2014
+  title: Numerical simulations of time-resolved quantum electronics
+  authors: Benoit Gaury, Joseph Weston, Matthieu Santin, Manuel Houzet, Christoph Groth, and Xavier Waintal
+  journal: Physics Reports 534, 1-37 (2014)
+  doi: 10.1016/j.physrep.2013.09.001
+  arxiv: '1307.6419'
+  abstract: This paper discusses the technical aspects - mathematical and numerical - associated with the numerical simulations of a mesoscopic system in the time domain (i.e. beyond the single frequency AC limit). After a short review of the state of the art, we develop a theoretical framework for the calculation of time resolved observables in a general multiterminal system subject to an arbitrary time dependent perturbation (oscillating electrostatic gates, voltage pulses, time-vaying magnetic fields) The approach is mathematically equivalent to (i) the time dependent scattering formalism, (ii) the time resolved Non Equilibrium Green Function (NEGF) formalism and (iii) the partition-free approach. The central object of our theory is a wave function that obeys a simple Schrodinger equation with an additional source term that accounts for the electrons injected from the electrodes. The time resolved observables (current, density. . .) and the (inelastic) scattering matrix are simply expressed in term of this wave function. We use our approach to develop a numerical technique for simulating time resolved quantum transport. We find that the use of this wave function is advantageous for numerical simulations resulting in a speed up of many orders of magnitude with respect to the direct integration of NEGF equations. Our technique allows one to simulate realistic situations beyond simple models, a subject that was until now beyond the simulation capabilities of available approaches.
+- n: 51
+  year: 2013
+  title: Numerical toolkit for electronic quantum transport at finite frequency
+  authors: Oleksii Shevtsov and Xavier Waintal
+  journal: Phys. Rev. B 87, 085304 (2013)
+  doi: 10.1103/physrevb.87.085304
+  arxiv: '1211.2768'
+  abstract: Building on the many existing algorithms for calculating the DC transport properties of quantum tight-binding models, we develop a systematic approach that expresses finite frequency observables in terms of the stationary Green's function of the system, i.e. the natural output of most DC numerical codes. Our framework allows to extend the simulations capabilities of existing codes to a large class of observables including, for instance, AC conductance, quantum capacitance, quantum pumping, spin pumping or photo-assisted shot noise. The theory is developed within the framework of Keldysh formalism and we provide explicit links with the alternative (and equivalent) scattering approach. We illustrate the formalism with a study of the AC conductance in a quantum point contact and an electronic Mach-Zehnder interferometer in the quantum Hall regime.
+- n: 50
+  year: 2013
+  title: Competing topological phases in few-layer graphene
+  authors: Pierre Carmier, Oleksii Shevtsov, Christoph Groth, and Xavier Waintal
+  journal: J. Comput. Electron. 12, 175-187 (2013)
+  doi: 10.1007/s10825-013-0454-y
+  arxiv: '1211.6628'
+  abstract: 'We investigate the effect of spin-orbit coupling on the band structure of graphene-based two-dimensional Dirac fermion gases in the quantum Hall regime. Taking monolayer graphene as our first candidate, we show that a quantum phase transition between two distinct topological states -- the quantum Hall and the quantum spin Hall phases -- can be driven by simply tuning the Fermi level with a gate voltage. This transition is characterized by the existence of a chiral spin-polarized edge state propagating along the interface separating the two topological phases. We then apply our analysis to the more difficult case of bilayer graphene. Unlike in monolayer graphene, spin-orbit coupling by itself has indeed been predicted to be unsuccessful in driving bilayer graphene into a topological phase, due to the existence of an even number of pairs of spin-polarized edge states. While we show that this remains the case in the quantum Hall regime, we point out that by additionally breaking the layer inversion symmetry, a non-trivial quantum spin Hall phase can re-emerge in bilayer graphene at low energy. We consider two different symmetry-breaking mechanisms: inducing spin-orbit coupling only in the upper layer, and applying a perpendicular electric field. In both cases, the presence at low energy of an odd number of pairs of edge states can be driven by an exchange field. The related situation in trilayer graphene is also discussed.'
+- n: 49
+  year: 2013
+  title: 'Proximity Effects Induced in Graphene by Magnetic Insulators: First-Principles Calculations on Spin Filtering and Exchange-Splitting Gaps'
+  authors: H. -X. Yang, A. Hallal, D. Terrade, X. Waintal, S. Roche, and M. Chshiev
+  journal: Phys. Rev. Lett. 110, 046603 (2013)
+  doi: 10.1103/physrevlett.110.046603
+  arxiv: '1211.6377'
+  abstract: We report on first-principles calculations of spin-dependent properties in graphene induced by its interaction with a nearby magnetic insulator (Europium oxide, EuO). The magnetic proximity effect results in spin polarization of graphene $π$ orbitals by up to 24 %, together with large exchange splitting bandgap of about 36 meV. The position of the Dirac cone is further shown to depend strongly on the graphene-EuO interlayer. These findings point towards the possible engineering of spin gating by proximity effect at relatively high temperature, which stands as a hallmark for future all-spin information processing technologies.
+- n: 48
+  year: 2012
+  title: Unified Drift-Diffusion Theory for Transverse Spin Currents in Spin Valves, Domain Walls, and Other Textured Magnets
+  authors: Cyril Petitjean, David Luc, and Xavier Waintal
+  journal: Phys. Rev. Lett. 109, 117204 (2012)
+  doi: 10.1103/physrevlett.109.117204
+  arxiv: '1206.4470'
+  abstract: 'Spins transverse to the magnetization of a ferromagnet only survives over a short distance. We develop a drift-diffusion approach that captures the main features of transverse spin effects in systems with arbitrary spin textures (vortices, domain walls) and generalizes the Valet-Fert theory. In addition to the standard characteristic lengths (mean free path for majority and manority electrons, spin diffusion length), the theory introduces two lengths scales, the transverse spin coherence length and the (Larmor) spin precession length. We show how those lengths can be extracted from ab-initio calculations or measured with giant magneto-resistance experiments. In long (adiabatic) domain walls, we provide an analytic formula that expresses the so called "non-adiabatic" (or field like) torque in term of those lengths scales. However, this "non adiabatic" torque is no longer a simple material parameter and depends on the actual spin texture: in thin (< 10nm) domain walls, we observe very significant deviations from the adiabatic limit.'
+- n: 47
+  year: 2012
+  title: Graphene-Based Heterojunction between Two Topological Insulators
+  authors: Oleksii Shevtsov, Pierre Carmier, Cyril Petitjean, Christoph Groth, David Carpentier, and Xavier Waintal
+  journal: Phys. Rev. X 2, 031004 (2012)
+  doi: 10.1103/physrevx.2.031004
+  arxiv: '1201.5044'
+  abstract: Quantum Hall (QH) and quantum spin Hall (QSH) phases have very different edge states and, when going from one phase to the other, the direction of one edge state must be reversed. We study this phenomena in graphene in presence of a strong perpendicular magnetic field on top of a spin-orbit (SO) induced QSH phase. We show that, below the SO gap, the QSH phase is virtually unaffected by the presence of the magnetic field. Above the SO gap, the QH phase is restored. An electrostatic gate placed on top of the system allows to create a QSH-QH junction which is characterized by the existence of a spin-polarized chiral state, propagating along the topological interface. We find that such a setup naturally provides an extremely sensitive spin-polarized current switch.
+- n: 46
+  year: 2012
+  title: Tunable thermopower in a graphene-based topological insulator
+  authors: Oleksii Shevtsov, Pierre Carmier, Christoph Groth, Xavier Waintal, and David Carpentier
+  journal: Phys. Rev. B 85, 245441 (2012)
+  doi: 10.1103/physrevb.85.245441
+  arxiv: '1109.5568'
+  abstract: Following the recent proposal by Weeks et al., which suggested that indium (or thallium) adatoms deposited on the surface of graphene should turn the latter into a quantum spin Hall (QSH) insulator characterized by a sizeable gap, we perform a systematic study of the transport properties of this system as a function of the density of randomly distributed adatoms. While the samples are, by construction, very disordered, we find that they exhibit an extremely stable QSH phase with no signature of the spatial inhomogeneities of the adatom configuration. We find that a simple rescaling of the spin-orbit coupling parameter allows us to account for the behaviour of the inhomogeneous system using a homogeneous model. This robustness opens the route to a much easier experimental realization of this topological insulator. We additionally find this material to be a very promising candidate for thermopower generation with a target temperature tunable from 1 to 80K and an efficiency ZT close to 1.
+- n: 45
+  year: 2012
+  title: Interplay between Nonequilibrium and Equilibrium Spin Torque Using Synthetic Ferrimagnets
+  authors: Christian Klein, Cyril Petitjean, and Xavier Waintal
+  journal: Phys. Rev. Lett. 108, 086601 (2012)
+  doi: 10.1103/physrevlett.108.086601
+  arxiv: '1109.2705'
+  abstract: 'We discuss the current induced magnetization dynamics of spin valves F0|N|SyF where the free layer is a synthetic ferrimagnet SyF made of two ferromagnetic layers F1 and F2 coupled by RKKY exchange coupling. In the interesting situation where the magnetic moment of the outer layer F2 dominates the magnetization of the ferrimagnet, we find that the sign of the effective spin torque exerted on the free middle layer F1 is controlled by the strength of the RKKY coupling: for weak coupling one recovers the usual situation where spin torque tends to, say, anti-align the magnetization of F1 with respect to the pinned layer F0. However for large coupling the situation is reversed and the spin torque tends to align F1 with respect to F0. Careful numerical simulations in the intermediate coupling regime reveal that the competition between these two incompatible limits leads generically to spin torque oscillator (STO) behavior. The STO is found in the absence of magnetic field, with very significant amplitude of oscillations and frequencies up to 50 GHz or higher.'
+- n: 44
+  year: 2012
+  title: From quantum confinement to quantum Hall effect in graphene nanostructures
+  authors: M. H. D. Guimarães, O. Shevtsov, X. Waintal, and B. J. van Wees
+  journal: Phys. Rev. B 85, 075424 (2012)
+  doi: 10.1103/physrevb.85.075424
+- n: 43
+  year: 2011
+  title: "Mesoscopic Current-In-Plane Giant Magneto-Resistance"
+  authors: "Cyril Petitjean, Xavier Waintal, Mairbek Chshiev, and Jacques Miltat"
+  journal: arXiv preprint
+  arxiv: '1109.3602'
+  abstract: "We develop a three dimensional semiclassical theory which generalizes the Valet-Fert model in order to account for non-collinear systems with magnetic texture, including e.g. domain walls or magnetic vortices. The theory allows for spin transverse to the magnetization to penetrate inside the ferromagnet over a finite length and properly accounts for the Sharvin resistances. For ferromagnetic-normal-ferromagnetic multilayers where the current is injected in the plane of the layers (CIP), we predict the existence of a non zero mesoscopic CIP Giant Magneto-Resistance (GMR) at the diffusive level. This mesoscopic CIP-GMR, which adds to the usual ballistic contributions, has a non monotonic spatial variation and is reminiscent of conductance quantization in the layers. Furthermore, we study the spin transfer torque in spin valve nanopillars. We find that when the magnetization direction is non uniform inside the free layer, the spin torque changes very significantly and simple one-dimensional calculations cease to be reliable."
+- n: 42
+  year: 2011
+  title: Inducing and optimizing magnetism in graphene nanomeshes
+  authors: Hongxin Yang, Mairbek Chshiev, Danil W. Boukhvalov, Xavier Waintal, and Stephan Roche
+  journal: Phys. Rev. B 84, 214404 (2011)
+  doi: 10.1103/physrevb.84.214404
+  arxiv: '1103.4188'
+  abstract: Using first-principles calculations, we explore the electronic and magnetic properties of graphene nanomesh (GNM), a regular network of large vacancies, produced either by lithography or nanoimprint. When removing an equal number of A and B sites of the graphene bipartite lattice, the nanomesh made mostly of zigzag (armchair) type edges exhibit antiferromagnetic (spin unpolarized) states. In contrast, in situation of sublattice symmetry breaking, stable ferri(o)magnetic states are obtained. For hydrogen-passivated nanomesh, the formation energy is dramatically decreased, and ground state is found to strongly depend on the vacancies shape and size. For triangular shaped holes, the obtained net magnetic moments increase with the number difference of removed A and B sites in agreement with Lieb's theorem for even A+B. For odd A+B triangular meshes and all cases of non-triangular nanomeshes including the one with even A+B, Lieb's theorem does not hold anymore which can be partially attributed to introduction of armchair edges. In addition, large triangular shaped GNM could be as robust as non-triangular GNMs, providing possible solution to overcome one of crucial challenges for the sp-magnetism. Finally, significant exchange splitting values as large as $\sim 0.5$ eV can be obtained for highly asymmetric structures evidencing the potential of GNM for room temperature carbon based spintronics. These results demonstrate that a turn from 0-dimensional graphene nanoflakes throughout 1-dimensional graphene nanoribbons with zigzag edges to GNM breaks localization of unpaired electrons and provides deviation from the rules based on Lieb's theorem. Such delocalization of the electrons leads the switch of the ground state of system from antiferromagnetic narrow gap insulator discussed for graphene nanoribons to ferromagnetic or nonmagnetic metal.
+- n: 41
+  year: 2011
+  title: Multiscale approach to spin transport in magnetic multilayers
+  authors: Simone Borlenghi, Valentin Rychkov, Cyril Petitjean, and Xavier Waintal
+  journal: Phys. Rev. B 84, 035412 (2011)
+  doi: 10.1103/physrevb.84.035412
+  arxiv: '1101.4697'
+  abstract: 'This article discusses two dual approaches to spin transport in magnetic multilayers: a direct, purely quantum, approach based on a Tight-Biding model (TB) and a semiclassical approach (Continuous Random Matrix Theory, CRMT). The combination of both approaches provides a systematic way to perform multi-scales simulations of systems that contain relevant physics at scales larger (spin accumulation, spin diffusion...) and smaller (specular reflexions, tunneling...) than the elastic mean free paths of the layers. We show explicitly that CRMT and TB give consistent results in their common domain of applicability.'
+- n: 40
+  year: 2011
+  title: Focused crossed Andreev reflection
+  authors: Håvard Haugen, Arne Brataas, Xavier Waintal, and Gerrit E. W. Bauer
+  journal: EPL 93, 67005 (2011)
+  doi: 10.1209/0295-5075/93/67005
+  arxiv: '1007.4653'
+  abstract: We consider non-local transport in a system with one superconducting and two normal metal terminals. Electron focusing by weak perpendicular magnetic fields is shown to tune the ratio between crossed Andreev reflection (CAR) and electron transfer (ET) in the non-local current response. Additionally, electron focusing facilitates non-local signals between normal metal contacts where the separation is as large as the mean free path rather than being limited by the coherence length of the superconductor. CAR and ET can be selectively enhanced by modulating the magnetic field.
+- n: 39
+  year: 2010
+  title: Effective Magnetic Monopoles and Universal Conductance Fluctuations
+  authors: Kjetil M. D. Hals, Anh Kiet Nguyen, Xavier Waintal, and Arne Brataas
+  journal: Phys. Rev. Lett. 105, 207204 (2010)
+  doi: 10.1103/physrevlett.105.207204
+  arxiv: '1008.0269'
+  abstract: The observation of isolated positive and negative charges, but not isolated magnetic north and south poles, is an old puzzle. Instead, evidence of effective magnetic monopoles has been found in the abstract momentum space. Apart from Hall-related effects, few observable consequences of these abstract monopoles are known. Here, we show that it is possible to manipulate the monopoles by external magnetic fields and probe them by universal conductance fluctuation (UCF) measurements in ferromagnets with strong spin-orbit coupling. The observed fluctuations are not noise, but reproducible quasiperiodic oscillations as a function of magnetisation direction, a novel Berry phase fingerprint of the magnetic monopoles.
+- n: 38
+  year: 2010
+  title: Crossed Andreev reflection versus electron transfer in three-terminal graphene devices
+  authors: Håvard Haugen, Daniel Huertas-Hernando, Arne Brataas, and Xavier Waintal
+  journal: Phys. Rev. B 81, 174523 (2010)
+  doi: 10.1103/physrevb.81.174523
+  arxiv: '0909.4654'
+  abstract: We investigate the transport properties of three-terminal graphene devices, where one terminal is superconducting and two are normal metals. The terminals are connected by nanoribbons. Electron transfer (ET) and crossed Andreev reflection (CAR) are identified via the non-local signal between the two normal terminals. Analytical expressions for ET and CAR in symmetric devices are found. We compute ET and CAR numerically for asymmetric devices. ET dominates CAR in symmetric devices, but CAR can dominate ET in asymmetric devices, where only the zero-energy modes of the zigzag nanoribbons contribute to the transport.
+- n: 37
+  year: 2010
+  title: Energy scale behind the metallic behaviors in low-density Si MOSFETs
+  authors: Geneviève Fleury and Xavier Waintal
+  journal: Phys. Rev. B 81, 165117 (2010)
+  doi: 10.1103/physrevb.81.165117
+  arxiv: '0902.3171'
+  abstract: We show that the unexpected metallic behavior (the so-called two-dimensional metal-insulator transition) observed in low-density Silicon metal-oxide-semiconductor field-effect transistors (Si-MOSFETs) is controlled by a unique characteristic energy scale, the polarization energy. On one hand, we perform Quantum Monte Carlo calculations of the energy needed to polarize the two dimensional electron gas at zero temperature, taking into account Coulomb interactions, valley degeneracy and electronic mobility (disorder). On the other hand, we identify the characteristic energy scale controlling the physics in eight different sets of experiments. We find that our {\it ab-initio} polarization energies (obtained without any adjustable parameters) are in perfect agreement with the observed characteristic energies for all available data, both for the magnetic field and temperature dependence of the resistivities. Our results put strong constraints on possible mechanisms responsible for the metallic behavior. In particular, there are strong indications that the system would eventually become insulating at low enough temperature.
+- n: 36
+  year: 2009
+  title: 'Spin Torque and Waviness in Magnetic Multilayers: A Bridge between Valet-Fert Theory and Quantum Approaches'
+  authors: Valentin S. Rychkov, Simone Borlenghi, Henri Jaffres, Albert Fert, and Xavier Waintal
+  journal: Phys. Rev. Lett. 103, 066602 (2009)
+  doi: 10.1103/physrevlett.103.066602
+  arxiv: '0902.4360'
+  abstract: We develop a simple theoretical framework for transport in magnetic multilayers, based on Landauer-Buttiker scattering formalism and Random Matrix Theory. A simple transformation allows one to go from the scattering point of view to theories expressed in terms of local currents and electrochemical potential. In particular, our theory can be mapped onto the well established classical Valet Fert theory for collinear systems. For non collinear systems, in the absence of spin-flip scattering, our theory can be mapped onto the generalized circuit theory. We apply our theory to the angular dependance of spin accumulation and spin torque in non-collinear spin valves.
+- n: 35
+  year: 2008
+  title: 'Many-Body Localization Study in Low-Density Electron Gases: Do Metals Exist in Two Dimensions?'
+  authors: Geneviève Fleury and Xavier Waintal
+  journal: Phys. Rev. Lett. 101, 226803 (2008)
+  doi: 10.1103/physrevlett.101.226803
+  arxiv: '0807.3433'
+  abstract: Using a combination of ground state quantum Monte-Carlo and finite size scaling techniques, we perform a systematic study of the effect of Coulomb interaction on the localisation length of a disordered two-dimensional electron gas. We find that correlations delocalise the 2D system. In the absence of valley degeneracy (as in GaAs heterostructures), this delocalization effect corresponds to a finite increase of the localization length. The delocalisation is much more dramatic in the presence of valley degeneracy (as in Si MOSFETSs) where the localization length increases drastically. Our results suggest that a rather simple mechanism can account for the main features of the metallic behaviour observed in high mobility Si MOSFETs. Our findings support the claim that this behaviour is indeed a genuine effect of the presence of electron-electron interactions, yet that the system is not a ``true'' metal in the thermodynamic sense.
+- n: 34
+  year: 2008
+  title: 'Persistent Currents in One Dimension: The Counterpart of Leggett’s Theorem'
+  authors: Xavier Waintal, Geneviève Fleury, Kyryl Kazymyrenko, Manuel Houzet, Peter Schmitteckert, and Dietmar Weinmann
+  journal: Phys. Rev. Lett. 101, 106804 (2008)
+  doi: 10.1103/physrevlett.101.106804
+  arxiv: '0804.1689'
+  abstract: We discuss the sign of the persistent current of N electrons in one dimensional rings. Using a topology argument, we establish lower bounds for the free energy in the presence of arbitrary electron-electron interactions and external potentials. Those bounds are the counterparts of upper bounds derived by Leggett. Rings with odd (even) numbers of polarized electrons are always diamagnetic (paramagnetic). We show that unpolarized electrons with N being a multiple of four exhibit either paramagnetic behavior or a superconductor-like current-phase relation.
+- n: 33
+  year: 2008
+  title: Knitting algorithm for calculating Green functions in quantum systems
+  authors: Kyryl Kazymyrenko and Xavier Waintal
+  journal: Phys. Rev. B 77, 115119 (2008)
+  doi: 10.1103/physrevb.77.115119
+  arxiv: '0711.3413'
+  also:
+  - label: 'code description: arXiv:1010.2627'
+    url: https://arxiv.org/abs/1010.2627
+  - label: download KNIT
+    url: /downloads/knit/KNITrelease1.2.tar.gz
+  abstract: 'We propose a fast and versatile algorithm to calculate local and transport properties such as conductance, shot noise, local density of state or local currents in mesoscopic quantum systems. Within the non equilibrium Green function formalism, we generalize the recursive Green function technique to tackle multiterminal devices with arbitrary geometries. We apply our method to analyze two recent experiments: an electronic Mach-Zehnder interferometer in a 2D gas and a Hall bar made of graphene nanoribbons in quantum Hall regime. In the latter case, we find that the Landau edge state pinned to the Dirac point gets diluted upon increasing carrier density.'
+- n: 32
+  year: 2008
+  title: Numerical Finite Size Scaling Approach to Many-Body Localization
+  authors: Geneviève Fleury and Xavier Waintal
+  journal: Phys. Rev. Lett. 100, 076602 (2008)
+  doi: 10.1103/physrevlett.100.076602
+  arxiv: '0709.2244'
+  abstract: We develop a numerical technique to study Anderson localization in interacting electronic systems. The ground state of the disordered system is calculated with quantum Monte-Carlo simulations while the localization properties are extracted from the ``Thouless conductance'' $g$, i.e. the curvature of the energy with respect to an Aharonov-Bohm flux. We apply our method to polarized electrons in a two dimensional system of size $L$. We recover the well known universal $β(g)=\rm{d}\log g/\rm{d}\log L$ one parameter scaling function without interaction. Upon switching on the interaction, we find that $β(g)$ is unchanged while the system flows toward the insulating limit. We conclude that polarized electrons in two dimensions stay in an insulating state in the presence of weak to moderate electron-electron correlations.
+- n: 31
+  year: 2007
+  title: Josephson junctions as detectors for non-Gaussian noise
+  authors: B. Huard, H. Pothier, Norman O. Birge, D. Esteve, X. Waintal, and J. Ankerhold
+  journal: Ann. Phys. (Leipzig) 16, 736-750 (2007)
+  doi: 10.1002/andp.200751910-1107
+  arxiv: '0711.0646'
+  abstract: Non-Gaussian fluctuations of the electrical current can be detected with a Josephson junction placed on-chip with the noise source. We present preliminary measurements with an NIS junction as a noise source, and a Josephson junction in the thermal escape regime as a noise detector. It is shown that the Josephson junction detects not only the average noise, which manifests itself as an increased effective temperature, but also the noise asymmetry. A theoretical description of the thermal escape of a Josephson junction in presence of noise with a non-zero third cumulant is presented, together with numerical simulations when the noise source is a tunnel junction with Poisson noise. Comparison between experiment and theory is discussed.
+- n: 30
+  year: 2007
+  title: Variational Wave Functions and Their Overlap with the Ground State
+  authors: Christophe Mora and Xavier Waintal
+  journal: Phys. Rev. Lett. 99, 030403 (2007)
+  doi: 10.1103/physrevlett.99.030403
+  arxiv: cond-mat/0703004
+  abstract: An intrinsic measure of the quality of a variational wave function is given by its overlap with the ground state of the system. We derive a general formula to compute this overlap when quantum dynamics in imaginary time is accessible. The overlap is simply related to the area under the $E(τ)$ curve, i.e. the energy as a function of imaginary time. This has important applications to, for example, quantum Monte-Carlo algorithms where the overlap becomes as a simple byproduct of routine simulations. As a result, we find that the practical definition of a good variational wave function for quantum Monte-Carlo simulations, {\it i.e.} fast convergence to the ground state, is equivalent to a good overlap with the actual ground state of the system.
+- n: 29
+  year: 2007
+  title: Quantum melting of a crystal of dipolar bosons
+  authors: Christophe Mora, Olivier Parcollet, and Xavier Waintal
+  journal: Phys. Rev. B 76, 064511 (2007)
+  doi: 10.1103/physrevb.76.064511
+  arxiv: cond-mat/0703620
+  abstract: We investigate the behaviour of dipolar bosons in two dimensions. We describe the large density crystalline limit analytically while we use quantum Monte-Carlo to study the melting toward the Bose-Einstein condensate. We find strong evidence for a first order transition. We characterize the window of experimentally accessible parameters in the context of ultracold bosons and show that observing the quantum melting should be within grasp once one is able to form cold heteronuclear molecules. Close to the melting, we can not conclude on the existence of a supersolid phase due to an insufficient overlap of our variational Bijl-Jastrow Ansatz with the actual ground state.
+- n: 28
+  year: 2006
+  title: Spin torque in a nanomagnet coupled to noncollinear ferromagnetic electrodes
+  authors: O. Parcollet and X. Waintal
+  journal: Phys. Rev. B 73, 144420 (2006)
+  doi: 10.1103/physrevb.73.144420
+  arxiv: cond-mat/0512508
+  abstract: 'We present a complete theory of the spin torque phenomena in a ultrasmall nanomagnet coupled to non-collinear ferromagnetic electrodes through tunnelling junctions. This model system can be described by a simple microscopic model which captures many physical effects characteristic of spintronics: tunneling magneto resistance, intrinsic and transport induced magnetic relaxation, current induced magnetization reversal and spin accumulation. Treating on the same footing the magnetic and transport degrees of freedom, we arrive at a closed equation for the time evolution of the magnetization. This equation is very close to the Landau-Lifshitz-Gilbert equation used in spin valves structures. We discuss how the presence of the Coulomb blockade phenomena and the discretization of the one-body spectrum gives some additional features to the current induced spin torque. Depending on the regime, the dynamic induced by the coupling to electrode can be viewed either as a spin torque or as a relaxation process. In addition to the possibility of stabilizing uniform spin precession states, we find that the system is highly hysteretic: up to three different magnetic states can be simultaneously stable in one region of the parameter space (magnetic field and bias voltage).We also discuss how the magneto-resistance can be used to provide additional information on the non-equilibrium peaks present in the nanomagnet spectroscopy experiments.'
+- n: 27
+  year: 2006
+  title: On the quantum melting of the two-dimensional Wigner crystal
+  authors: X. Waintal
+  journal: Phys. Rev. B 73, 075417 (2006)
+  doi: 10.1103/physrevb.73.075417
+  arxiv: cond-mat/0509436
+  abstract: The Fermi liquid-Wigner crystal transition in a two dimensional electronic system is revisited with a focus on the nature of the fixed node approximation done in quantum Monte Carlo calculations. Recently, we proposed (Phys. Rev. Lett. 94, 046801 (2005)) that for intermediate densities, a hybrid phase (with the symmetry of the crystal but otherwise liquid like properties) is more stable than both the liquid and the crystal phase. Here we confirm this result both in the thermodynamic and continuum limit. The liquid-hybrid transition takes place at rs=31.5 +/- 0.5. We find that the stability of the hybrid phase with respect to the crystal one is tightly linked to its delocalized nature. We discuss the implications of our results for various transition scenarii (quantum hexatic phase, supersolid, multiple exchange, microemulsions) proposed in the literature.
+- n: 26
+  year: 2005
+  title: Current-Induced Spin Torque in a Nanomagnet
+  authors: X. Waintal and O. Parcollet
+  journal: Phys. Rev. Lett. 94, 247206 (2005)
+  doi: 10.1103/physrevlett.94.247206
+  arxiv: cond-mat/0411375
+  abstract: 'In a nanomagnet (whose total spin S< 1000), very small polarized currents can lead to magnetic reversal. Treating on the same footing the transport and magnetic properties of a nanomagnet connected to magnetic leads via tunneling barriers, we derive a closed equation for the time evolution of the magnetization. The interplay between Coulomb blockade phenomena and magnetism gives some additional structure to the current induced spin torque. In addition to the possibility of stabilizing uniform spin waves, we find that the system is highly hysteretic: up to three different magnetic states can be simultaneously stable in one region of the parameter (magnetic field and bias voltage) space.'
+- n: 25
+  year: 2005
+  title: Hybrid Phase at the Quantum Melting of the Wigner Crystal
+  authors: Houman Falakshahi and Xavier Waintal
+  journal: Phys. Rev. Lett. 94, 046801 (2005)
+  doi: 10.1103/physrevlett.94.046801
+  arxiv: cond-mat/0406600
+  abstract: We study the quantum melting of the two-dimensional Wigner crystal using a fixed node quantum Monte-Carlo approach. In addition to the two already known phases (Fermi liquid at large density and Wigner crystal at low density), we find a third stable phase at intermediate values of the density. The third phase has hybrid behaviors in between a liquid and a solid. This hybrid phase has the nodal structure of a Slater determinant constructed out of the bands of a triangular lattice.
+- n: 24
+  year: 2004
+  title: Current-induced distortion of a magnetic domain wall
+  authors: Xavier Waintal and Michel Viret
+  journal: Europhys. Lett. 65, 427-433 (2004)
+  doi: 10.1209/epl/i2003-10089-y
+  arxiv: cond-mat/0301293
+  abstract: We consider the spin torque induced by a current flowing ballistically through a magnetic domain wall. In addition to a global pressure in the direction of the electronic flow, the torque has an internal structure of comparable magnitude due to the precession of the electrons' spins at the "Larmor" frequency. As a result, the profile of the domain wall is expected to get distorted by the current and acquires a periodic sur-structure.
+- n: 23
+  year: 2003
+  title: Tunable Magnetic Relaxation Mechanism in Magnetic Nanoparticles
+  authors: Xavier Waintal and Piet W. Brouwer
+  journal: Phys. Rev. Lett. 91, 247201 (2003)
+  doi: 10.1103/physrevlett.91.247201
+  arxiv: cond-mat/0307256
+  abstract: We investigate the magnetization dynamics of a conducting magnetic nanoparticle weakly coupled to source and drain electrodes, under the assumption that all relaxation comes from exchange of electrons with the electrodes. The magnetization dynamics is characterized by a relaxation time $t_1$, which strongly depends on temperature, bias voltage, and gate voltage. While a direct measure of a nanoparticle magnetization might be difficult, we find that $t_1$ can be determined through a time resolved transport measurement. For a suitable choice of gate voltage and bias voltage, the magnetization performs a bias-driven Brownian motion regardless of the presence of anisotropy.
+- n: 22
+  year: 2002
+  title: From the Fermi Liquid towards the Wigner Solid in Two Dimensions
+  authors: Jean-Louis Pichard, Giuliano Benenti, Georgios Katomeris, Franck Selva, and Xavier Waintal
+  journal: Exotic States in Quantum Nanostructures, S. Sarkar (ed.), pp. 263-307 (2002)
+  doi: 10.1007/978-94-015-9974-0_7
+  arxiv: cond-mat/0107380
+  abstract: The quantum-classical crossover from the Fermi liquid towards the Wigner solid is numerically revisited, considering small square lattice models where electrons interact via a Coulomb U/r potential. We review a series of exact numerical results obtained in the presence of weak site disorder for fully polarized electrons (spinless fermions) and when the spin degrees of freedom are included. A novel intermediate regime between the Fermi system of weakly interacting localized particles and the correlated Wigner solid is obtained. A detailed analysis of the non disordered case shows that the intermediate ground state is a solid entangled with an excited liquid. For electrons in two dimensions, this raises the question of the existence of an unnoticed intermediate liquid-solid phase. Using the Coulomb energy to kinetic energy ratio r_s ~ U ~ n_s^{-1/2}, we discuss certain analogies between the numerical results obtained as a function of U for a few particles and the low temperature behaviors obtained as a function of the carrier density n_s in two dimensional electron gases. Notably, the new ``exotic state of matter'' numerically observed at low energies in small clusters occurs at the same intermediate ratios r_s than the unexpected low temperature metallic behavior characterizing dilute electron gases. The finite size effects in the limit of strong disorder are eventually studied in the last section, providing two numerical evidences that the weak coupling Fermi limit is delimited by a second order quantum phase transition when one increases U.
+- n: 21
+  year: 2002
+  title: Magnetic-field dependence of energy levels in ultrasmall metal grains
+  authors: S. Adam, M. L. Polianski, X. Waintal, and P. W. Brouwer
+  journal: Phys. Rev. B 66, 195412 (2002)
+  doi: 10.1103/physrevb.66.195412
+  arxiv: cond-mat/0206377
+  abstract: We present a theory of mesoscopic fluctuations of g tensors and avoided crossing energies in a small metal grain. The model, based on random matrix theory, contains both the orbital and spin contributions to the g tensor. The two contributions can be experimentally separated for weak spin-orbit coupling while they merge in the strong coupling limit. For intermediate coupling, substantial correlations are found between g factors of neighboring levels.
+- n: 20
+  year: 2002
+  title: Enhanced mesoscopic fluctuations in the crossover between random-matrix ensembles
+  authors: Shaffique Adam, Piet W. Brouwer, James P. Sethna, and Xavier Waintal
+  journal: Phys. Rev. B 66, 165310 (2002)
+  doi: 10.1103/physrevb.66.165310
+  arxiv: cond-mat/0203002
+  abstract: In random-matrix ensembles that interpolate between the three basic ensembles (orthogonal, unitary, and symplectic), there exist correlations between elements of the same eigenvector and between different eigenvectors. We study such correlations, using a remarkable correspondence between the interpolating ensembles late in the crossover and a basic ensemble of finite size. In small metal grains or semiconductor quantum dots, the correlations between different eigenvectors lead to enhanced fluctuations of the electron-electron interaction matrix elements which become parametrically larger than the non-universal fluctuations.
+- n: 19
+  year: 2002
+  title: Magnetic exchange interaction induced by a Josephson current
+  authors: Xavier Waintal and Piet W. Brouwer
+  journal: Phys. Rev. B 65, 054407 (2002)
+  doi: 10.1103/physrevb.65.054407
+  arxiv: cond-mat/0107258
+  abstract: We show that a Josephson current flowing through a ferromagnet-normal-metal-ferromagnet trilayer connected to two superconducting electrodes induces an equilibrium exchange interaction between the magnetic moments of the ferromagnetic layers. The sign and magnitude of the interaction can be controlled by the phase difference between the order parameters of the two superconductors. We present a general framework to calculate the Josephson current induced magnetic exchange interaction in terms of the scattering matrices of the different layers. The effect should be observable as the periodic switching of the relative orientation of the magnetic moments of the ferromagnetic layers in the ac Josephson effect.
+- n: 18
+  year: 2002
+  title: Spin, spin-orbit, and electron-electron interactions in mesoscopic systems
+  authors: Yuval Oreg, P. W. Brouwer, X. Waintal, and Bertrand I. Halperin
+  journal: 'Nano-Physics & Bio-Electronics: A New Odyssey, pp. 147-186 (2002)'
+  doi: 10.1016/b978-044450993-2/50005-7
+  arxiv: cond-mat/0109541
+  abstract: We review recent theoretical developments about the role of spins, electron-electron interactions, and spin-orbit coupling in metal nanoparticles and semiconductor quantum dots. For a closed system, in the absence of spin-orbit coupling or of an external magnetic field, electron-electron interactions make it possible to have ground states with spin $S > 1/2$. We review here a theoretical analysis which makes predictions for the probability of finding various values of spin $S$ for an irregular particle in the limit where the number of electron is large but finite. We also present results for the probability distribution of the spacing between successive groundstate energies in such a particle. In a metallic particle with strong spin-orbit interactions, for odd electron number, the groundstate has a Kramers' degeneracy, which is split linearly by a weak applied magnetic field. The splitting may be characterized by an effective $g$-tensor whose principal axes and eigenvalues vary from one level to another. Recent calculations have addressed the joint probability distribution, including the anisotropy, of the eigenvalues. The peculiar form of the spin-orbit coupling for a two-dimensional electron system in a GaAs heterostructure or quantum well leads to a strong suppression of spin-orbit effects when the electrons are confined in a small quantum dot. Spin-effects can be enhanced, however, in the presence of an applied magnetic field parallel to the layer, which may explain recent observations on fluctuations in the conductances through such dots. We also discuss possible explanations for the experimental observations by Davidovic and Tinkham of a multiplet splitting of the lowest resonance in the tunneling conductance through a gold nano-particle.
+- n: 17
+  year: 2001
+  title: Spin torque in a magnetic trilayer coupled to a superconductor
+  authors: Xavier Waintal and Piet W. Brouwer
+  journal: Proceedings of the XXXVIth Rencontres de Moriond, T. Martin and G. Montambaux (eds.)
+  arxiv: cond-mat/0107265
+  abstract: A ferromagnet-normal-metal-ferromagnet trilayer does not conserve spin current and as a result, the conduction electrons can create a torque on the magnetic moments. When the trilayer is connected to a superconducting electrode, the spin torque created by a current flowing perpendicularly to the trilayer can drive the system to a configuration where the two magnetic moments are perpendicular to each other. Here we argue that in contrast to the non-equilibrium torque, the equilibrium torque (or magnetic exchange interaction) does not single out the perpendicular configuration. We calculate the equilibrium torque for a one-dimensional lattice model and find that it is sensitive to the presence of the superconductivity.
+- n: 16
+  year: 2001
+  title: Current-induced switching of magnetic domains to a perpendicular configuration
+  authors: Xavier Waintal and Piet W. Brouwer
+  journal: Phys. Rev. B 63, 220407 (2001)
+  doi: 10.1103/physrevb.63.220407
+  arxiv: cond-mat/0010255
+  abstract: In a ferromagnet--normal-metal--ferromagnet trilayer, a current flowing perpendicularly to the layers creates a torque on the magnetic moments of the ferromagnets. When one of the contacts is superconducting, the torque not only favors parallel or antiparallel alignment of the magnetic moments, as is the case for two normal contacts, but can also favor a configuration where the two moments are perpendicular. In addition, whereas the conductance for parallel and antiparallel magnetic moments is the same, signalling the absence of giant magnetoresistance in the usual sense, the conductance is greater in the perpendicular configuration. Thus, a negative magnetoconductance is predicted, in contrast with the usual giant magnetoresistance.
+- n: 15
+  year: 2001
+  title: Fano Resonances as a Probe of Phase Coherence in Quantum Dots
+  authors: A. A. Clerk, X. Waintal, and P. W. Brouwer
+  journal: Phys. Rev. Lett. 86, 4636-4639 (2001)
+  doi: 10.1103/physrevlett.86.4636
+  arxiv: cond-mat/0010038
+  abstract: In the presence of direct trajectories connecting source and drain contacts, the conductance of a quantum dot may exhibit resonances of the Fano type. Since Fano resonances result from the interference of two transmission pathways, their lineshape (as described by the Fano parameter q) is sensitive to dephasing in the quantum dot. We show that under certain circumstances the dephasing time can be extracted from a measurement of q for a single resonance. We also show that q fluctuates from level to level, and calculate its probability distribution for a chaotic quantum dot. Our results are relevant to recent experiments by Goeres et al.
+- n: 14
+  year: 2000
+  title: Role of spin-dependent interface scattering in generating current-induced torques in magnetic multilayers
+  authors: Xavier Waintal, Edward B. Myers, Piet W. Brouwer, and D. C. Ralph
+  journal: Phys. Rev. B 62, 12317-12327 (2000)
+  doi: 10.1103/physrevb.62.12317
+  arxiv: cond-mat/0005251
+  abstract: We present a calculation of current-induced torques in metallic magnetic multilayers derived from the spin-dependent transmission and reflection properties of the magnetic layers. A scattering formalism is employed to calculate the torques in a magnetic-nonmagnetic-magnetic trilayer, for currents perpendicular to the layers, in both the ballistic and diffusive regimes.
+- n: 13
+  year: 2000
+  title: Fluctuating spin g-tensor in small metal grains
+  authors: P. W. Brouwer, X. Waintal, and B. I. Halperin
+  journal: Phys. Rev. Lett. 85, 369-372 (2000)
+  doi: 10.1103/physrevlett.85.369
+  arxiv: cond-mat/0002139
+  abstract: In the presence of spin-orbit scattering, the splitting of an energy level in a generic small metal grain due to the Zeeman coupling to a magnetic field B depends on the direction of B, as a result of mesoscopic fluctuations. The anisotropy is described by the eigenvalues g_j^2 (j=1,2,3) of a tensor G, corresponding to the (squares of) g-factors along three principal axes. We consider the statistical distribution of G and find that the anisotropy is enhanced by eigenvalue repulsion between the g_j.
+- n: 12
+  year: 2000
+  title: Signatures of an intermediate 2D Coulomb phase at low temperatures
+  authors: Giuliano Benenti, Xavier Waintal, and Jean-Louis Pichard
+  journal: Europhys. Lett. 51, 89-95 (2000)
+  doi: 10.1209/epl/i2000-00340-1
+  arxiv: cond-mat/9910271
+  abstract: The study of the ground state of spinless fermions in 2d disordered clusters (Phys. Rev. Lett. {\bf 83}, 1826 (1999)) has suggested the existence of a new quantum phase for intermediate Coulomb energy to kinetic energy ratios $r_s$. Exact diagonalization of the same small clusters show that its low energy excitations (quantum ergodicity above a few ``hexatic'' excitations characterized by oriented currents) significantly differ from those occuring in the Fermi glass (weak $r_s$) and in the pinned Wigner crystal (large $r_s$). The ``hexatic'' excitations vanish for temperatures of order of the Fermi temperature.
+- n: 11
+  year: 2000
+  title: Delocalized Coulomb phase in two dimensions
+  authors: Xavier Waintal, Giuliano Benenti, and Jean-Louis Pichard
+  journal: Europhys. Lett. 49, 466-472 (2000)
+  doi: 10.1209/epl/i2000-00172-5
+  arxiv: cond-mat/9906397
+  abstract: Extending finite size scaling theory to the many body ground state, one finds that Coulomb repulsion can drive a system of spinless fermions in a random potential from the Anderson insulator (Fermi glass of localized states) towards a new extended phase in dimension $d=2$. The transition occurs at a Coulomb energy to Fermi energy ratio $r_s \approx 4$, where a change in the nature of the persistent currents has been previously observed. Relevance to the recently observed $2d$ metallic phase is suggested.
+- n: 10
+  year: 2000
+  title: Compressibility crossover and quantum opening of a gap for two-dimensional disordered clusters with Coulomb repulsion
+  authors: Giuliano Benenti, Xavier Waintal, Jean-Louis Pichard, and Dima Shepelyansky
+  journal: Eur. Phys. J. B 17, 515-521 (2000)
+  doi: 10.1007/s100510070129
+  arxiv: cond-mat/0003208
+  abstract: Using Hartree-Fock orbitals with residual Coulomb repulsion, we study spinless fermions in a two dimensional random potential. When we increase the system size $L$ at fixed particle density, the size dependence of the average inverse compressibility exhibits a smooth crossover from a $1/L^2$ towards a 1/L decay when the Coulomb energy to Fermi energy ratio $r_s$ increases from 0 to 3. In contrast, the distribution of the first energy excitation displays a sharp Poisson-Wigner-like transition at $r_s \approx 1$.
+- n: 9
+  year: 1999
+  title: "Quantum opening of the Coulomb gap in two dimensions"
+  authors: "Giuliano Benenti, Xavier Waintal, Jean-Louis Pichard, and Dima L. Shepelyansky"
+  journal: arXiv preprint
+  arxiv: 'cond-mat/9903339'
+  abstract: "For a constant density of spinless fermions in strongly disordered two dimensional clusters, the energy level spacing between the ground state and the first excitation is studied for increasing system sizes. The average indicates a smooth opening of the gap when the Coulomb energy to Fermi energy ratio $r_s$ increases from 0 to 3, while the distribution exhibits a sharp Poisson-Wigner-like transition at $r_s \\approx 1$. The results are related to the transition from Mott to Efros-Shklovskii hopping conductivity recently observed at a similar ratio $r_s$."
+- n: 8
+  year: 1999
+  title: Metallic phase between the Fermi glass and the Wigner crystal in two dimensions
+  authors: Xavier Waintal, Giuliano Benenti, and Jean-Louis Pichard
+  journal: Ann. Phys. (Leipzig) 8, 691 (1999)
+  doi: 10.1002/andp.199951107-920
+  arxiv: cond-mat/9907318
+  abstract: For intermediate Coulomb energy to Fermi energy ratios $r_s$, spinless fermions in a two-dimensional random potential form a new quantum phase, different from the Fermi glass (weakly interacting Anderson localized states) and the Wigner crystal (regular array of charges pinned by the disorder). The intermediate phase is characterized by an ordered flow of persistent currents with a typical value decreasing with excitation energy. Extending finite size scaling analysis to the many body ground state, we find that electron-electron interactions can drive the Fermi glass towards an intermediate metallic phase (Coulomb metal).
+- n: 7
+  year: 1999
+  title: A new quantum phase in two dimensions
+  authors: Giuliano Benenti, Xavier Waintal, and Jean-Louis Pichard
+  journal: Proceedings of the XXXIVth Rencontres de Moriond "Quantum Physics at Mesoscopic Scale"
+  arxiv: cond-mat/9905028
+  abstract: For intermediate Coulomb energy to Fermi energy ratios $r_s$, spinless fermions in a random potential form a new quantum phase which is different from the Fermi glass and the Wigner crystal. From a numerical study of small clusters, we show that this phase is characterized by an ordered flow of enhanced persistent currents and occurs for $r_s$ values where a metallic phase has been observed in two dimensions.
+- n: 6
+  year: 1999
+  title: New Quantum Phase between the Fermi Glass and the Wigner Crystal in Two Dimensions
+  authors: Giuliano Benenti, Xavier Waintal, and Jean-Louis Pichard
+  journal: Phys. Rev. Lett. 83, 1826-1829 (1999)
+  doi: 10.1103/physrevlett.83.1826
+  arxiv: cond-mat/9904096
+  abstract: For intermediate Coulomb energy to Fermi energy ratios $r_s$, spinless fermions in a random potential form a new quantum phase which is nor a Fermi glass, neither a Wigner crystal. Studying small clusters, we show that this phase gives rise to an ordered flow of enhanced persistent currents, for disorder strength and ratios $r_s$ where a metallic phase has been recently observed in two dimensions.
+- n: 5
+  year: 1999
+  title: 'Two interacting particles in a disordered chain III: Dynamical aspects of the interplay disorder-interaction'
+  authors: Samuel De Toro Arias, Xavier Waintal, and Jean-Louis Pichard
+  journal: Eur. Phys. J. B 10, 149-158 (1999)
+  doi: 10.1007/s100510050838
+  arxiv: cond-mat/9808136
+  abstract: The interplay between the quantum interferences responsible for one particle localization over a length L_1, and the partial dephasing induced by a local interaction of strength U with another particle leading to partial delocalization over a length L_2 > L_1, is illustrated by a study of the motion of two particles put close to each other at the initial time. Localization is reached in two steps. First, before the time t_1 necessary to propagate over L_1, the interaction slows down the ballistic motion. On the contrary, after t_1 the interaction favors a very slow delocalization, characterized by a $\log(t)$ spreading of the center of mass, until L_2 is reached. This slow motion is related to the absence of quantum chaos in this one dimensional model, the interaction being only able to induce weaker chaos with critical spectral statistics. Under appropriate initial conditions, the motion remains invariant under the duality transformation mapping the behavior at small U onto the behavior at large U.
+- n: 4
+  year: 1999
+  title: 'Two interacting particles in a disordered chain II: Critical statistics and maximum mixing of the one body states'
+  authors: Xavier Waintal, Dietmar Weinmann, and Jean-Louis Pichard
+  journal: Eur. Phys. J. B 7, 451-456 (1999)
+  doi: 10.1007/s100510050633
+  arxiv: cond-mat/9801134
+  abstract: For two particles in a disordered chain of length $L$ with on-site interaction $U$, a duality transformation maps the behavior at weak interaction onto the behavior at strong interaction. Around the fixed point of this transformation, the interaction yields a maximum mixing of the one body states. When $L \approx L_1$ (the one particle localization length), this mixing results in weak chaos accompanied by multifractal wave functions and critical spectral statistics, as in the one particle problem at the mobility edge or in certain pseudo-integrable billiards. In one dimension, a local interaction can only yield this weak chaos but can never drive the two particle system to full chaos with Wigner-Dyson statistics.
+- n: 3
+  year: 1998
+  title: "New state of the matter between the Fermi glass and the Wigner crystal in two dimensions"
+  authors: "Giuliano Benenti, Xavier Waintal, and Jean-Louis Pichard"
+  journal: arXiv preprint
+  arxiv: 'cond-mat/9812339'
+  abstract: "Spinless fermions with Coulomb interaction in a square disordered lattice form a new state of the matter which is nor a Fermi glass, neither a Wigner crystal for intermediate Coulomb interaction. From a numerical study of small clusters, we find that this new state occurs between the two critical carrier densities where insulator-metal-insulator transitions of a hole gas have been observed in GaAs."
+- n: 2
+  year: 1998
+  title: Interplay disorder–interaction in one-dimensional quantum models
+  authors: Jean-Louis Pichard, Dietmar Weinmann, Samuel De Toro Arias, Rodolfo A. Jalabert, Peter Schmitteckert, Xavier Waintal, and André Wobst
+  journal: Ann. Phys. (Leipzig) 7, 462 (1998)
+  doi: 10.1002/andp.199851005-615
+- n: 1
+  year: 1998
+  title: 'Two interacting particles in a disordered chain I: Multifractality of the interaction matrix elements'
+  authors: Xavier Waintal and Jean-Louis Pichard
+  journal: Eur. Phys. J. B 6, 117-121 (1998)
+  doi: 10.1007/s100510050533
+  arxiv: cond-mat/9706258
+  abstract: For $N$ interacting particles in a one dimensional random potential, we study the structure of the corresponding network in Hilbert space. The states without interaction play the role of the ``sites''. The hopping terms are induced by the interaction. When the one body states are localized, we numerically find that the set of directly connected ``sites'' is multifractal. For the case of two interacting particles, the fractal dimension associated to the second moment of the hopping term is shown to characterize the Golden rule decay of the non interacting states and the enhancement factor of the localization length.

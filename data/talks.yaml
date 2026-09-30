@@ -1,0 +1,124 @@
+# Recorded talks and lectures, newest first within each group.
+# Fields: title, event, date (YYYY-MM), url, thumb (image in static/img/talks/), lang (optional, "fr" for French),
+#         featured (optional, true = shown on the home page), page (optional event page),
+#         parts (optional, for a lecture series: list of {label, url}).
+# For a YouTube video with id XXXXXXXXXXX, get the thumbnail with:
+#   curl -o static/img/talks/XXXXXXXXXXX.jpg https://i.ytimg.com/vi/XXXXXXXXXXX/mqdefault.jpg
+
+- group: Talks and seminars
+  items:
+    - title: "Quantum computers versus classical computers: who will solve chemistry?"
+      event: Kharkiv Quantum Seminar (online)
+      date: 2025-06
+      url: https://www.youtube.com/watch?v=f9-588BFU6U
+      thumb: f9-588BFU6U.jpg
+      featured: true
+    - title: "Tensor networks will save the day where quantum computers might fail"
+      event: AerospaceLab conference, ONERA, Châtillon
+      date: 2024-05
+      page: https://onera.fr/fr/agenda/xavier-waintal-tensor-networks-will-save-the-day-where-quantum-computers-might-fail
+      url: https://www.youtube.com/watch?v=BLi9WliRGE4
+      thumb: BLi9WliRGE4.jpg
+      lang: fr
+    - title: "Learning Feynman diagrams with tensor trains"
+      event: Perimeter Institute (PIRSA)
+      date: 2023-06
+      url: https://pirsa.org/23060034
+      thumb: ""
+    - title: "The out-of-equilibrium Anderson impurity model: a numerically exact approach"
+      event: Quantum impurity workshop, Institut Pascal
+      date: 2021-09
+      url: https://www.youtube.com/watch?v=yEyTl-1HnBc
+      thumb: yEyTl-1HnBc.jpg
+    - title: "Correlations and quantum transport: automatic calculation of Feynman diagrams"
+      event: Virtual Science Forum
+      date: 2021-06
+      url: https://www.youtube.com/watch?v=zYHXiPXUJmI
+      thumb: zYHXiPXUJmI.jpg
+    - title: "What does quantum supremacy really mean?"
+      event: Portland Quantum Computing Meetup
+      date: 2021-05
+      url: https://www.youtube.com/watch?v=FTlsRXO-oU4
+      thumb: FTlsRXO-oU4.jpg
+      featured: true
+    - title: "What limits the simulation of quantum computers?"
+      event: IRIF, Paris
+      date: 2021-02
+      url: https://www.youtube.com/watch?v=Xb8GInhuRkM
+      thumb: Xb8GInhuRkM.jpg
+    - title: "Diagrammatic Monte Carlo workshop"
+      event: Simons Foundation, New York
+      date: 2019-07
+      url: https://www.youtube.com/watch?v=vdKbXnYlkYM
+      thumb: vdKbXnYlkYM.jpg
+
+- group: Lectures
+  items:
+    - title: "Quantum inspired algorithms versus quantum computers (5 lectures)"
+      event: Jyväskylä Summer School, University of Jyväskylä
+      date: 2025-08
+      url: https://www.youtube.com/watch?v=vyCk9WrBfAU
+      thumb: vyCk9WrBfAU.jpg
+      featured: true
+      parts:
+        - {label: "Lecture 1", url: "https://www.youtube.com/watch?v=vyCk9WrBfAU"}
+        - {label: "2", url: "https://www.youtube.com/watch?v=oS0c0nsHqdo"}
+        - {label: "3", url: "https://www.youtube.com/watch?v=Zx-hzXhhg8E"}
+        - {label: "4", url: "https://www.youtube.com/watch?v=CPOa-mxop3E"}
+        - {label: "5", url: "https://www.youtube.com/watch?v=Sto6-b7--tc"}
+        - {label: "lecture notes", url: "https://arxiv.org/abs/2601.03035"}
+        - {label: "channel", url: "https://www.youtube.com/@Quantuminspiredalgorithms"}
+    - title: "Introduction aux algorithmes quantiques"
+      event: Maison du Quantique Alpes
+      date: 2026-03
+      url: https://www.youtube.com/watch?v=LHhqNJofhCk
+      thumb: LHhqNJofhCk.jpg
+      lang: fr
+    - title: "Variational approaches for quantum matter (2 lectures and a tutorial)"
+      event: 8th Les Houches School in Computational Physics
+      date: 2024-06
+      url: https://videos.univ-grenoble-alpes.fr/video/30081-xavier-waintal-i/
+      thumb: houches-I.jpg
+      parts:
+        - {label: "Lecture I", url: "https://videos.univ-grenoble-alpes.fr/video/30081-xavier-waintal-i/"}
+        - {label: "Lecture II", url: "https://videos.univ-grenoble-alpes.fr/video/30091-xavier-waintal-ii/"}
+        - {label: "Tutorial", url: "https://videos.univ-grenoble-alpes.fr/video/30238-xavier-waintal-t/"}
+    - title: "Floquet summer school (2 lectures, with Thomas Kloss)"
+      event: Virtual Science Forum
+      date: 2022-09
+      url: https://www.youtube.com/watch?v=Ih-_ehaB-ME
+      thumb: Ih-_ehaB-ME.jpg
+      parts:
+        - {label: "Lecture 1", url: "https://www.youtube.com/watch?v=Ih-_ehaB-ME"}
+        - {label: "Lecture 2", url: "https://www.youtube.com/watch?v=GaiBLu0bn9Y"}
+    - title: "Introduction to quantum computing (3 lectures)"
+      event: Sorbonne Université
+      date: ""
+      url: https://sorbonne-universite.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=5e51bc33-11a3-433e-8f73-ad1e00b26a71
+      thumb: ""
+      parts:
+        - {label: "Lecture 1", url: "https://sorbonne-universite.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=5e51bc33-11a3-433e-8f73-ad1e00b26a71"}
+        - {label: "Lecture 2", url: "https://sorbonne-universite.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=d521bf31-290d-41d9-a7f4-ad2b00984528"}
+        - {label: "Lecture 3", url: "https://sorbonne-universite.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b7fe8ff5-9ce1-4212-b4a7-ad2d00c4bf9f"}
+
+- group: General audience
+  items:
+    - title: "Decode Quantum: à la rencontre de Xavier Waintal (podcast interview)"
+      event: Decode Quantum / FrenchWeb
+      date: 2021-04
+      url: https://www.frenchweb.fr/decode-quantum-a-la-rencontre-de-xavier-waintal-directeur-de-recherche-au-cea/420099
+      thumb: ""
+      lang: fr
+    - title: "Le cantique du quantique (documentary, 52 min)"
+      event: France 3 / ici Auvergne-Rhône-Alpes
+      date: 2025-10
+      url: https://irig.cea.fr/drf/irig/Pages/Vulgarisation/2025_FranceTV_XWaintal.aspx
+      thumb: ""
+      lang: fr
+    - title: "A-t-on atteint la suprématie quantique ?"
+      event: Midi MINATEC, Grenoble
+      date: 2021-03
+      url: https://www.youtube.com/watch?v=Xxaz679UKW8
+      thumb: Xxaz679UKW8.jpg
+      lang: fr
+      featured: true

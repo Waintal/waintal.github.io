@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="page-head"><h1>{{ .Title }}</h1></div>
+<div class="prose">{{ .Content }}</div>
+<div class="pubtools">
+  <input id="pubfilter" type="search" placeholder="Filter by title, author, journal, year…" aria-label="Filter publications">
+  <span id="pubcount" class="muted"></span>
+</div>
+{{ $years := slice }}{{ range site.Data.publications }}{{ if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}{{ end }}
+{{ $years = sort $years "value" "desc" }}
+<div class="pubs-layout">
+  <div class="pubs">
+    {{ range $y := $years }}
+    <section class="yeargroup" id="y{{ $y }}">
+      <h2 class="year">{{ $y }}</h2>
+      <ul class="plain">
+        {{ range where site.Data.publications "year" $y }}{{ partial "paper.html" (dict "p" . "full" true) }}{{ end }}
+      </ul>
+    </section>
+    {{ end }}
+  </div>
+  <nav class="years" aria-label="Years">{{ range $years }}<a href="#y{{ . }}">{{ . }}</a>{{ end }}</nav>
+</div>
+<script>
+(function(){
+  var input=document.getElementById('pubfilter'), count=document.getElementById('pubcount');
+  var items=[].slice.call(document.querySelectorAll('.pubs .paper')), groups=[].slice.call(document.querySelectorAll('.yeargroup'));
+  function run(){
+    var q=input.value.toLowerCase().trim().split(/\s+/).filter(Boolean), n=0;
+    items.forEach(function(li){ var ok=q.every(function(w){return li.dataset.search.indexOf(w)>=0}); li.hidden=!ok; if(ok)n++; });
+    groups.forEach(function(g){ g.hidden=!g.querySelector('.paper:not([hidden])'); });
+    count.textContent = q.length ? n+' of '+items.length : items.length+' publications';
+  }
+  input.addEventListener('input',run); run();
+})();
+</script>
+{{ end }}
