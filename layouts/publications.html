@@ -5,7 +5,7 @@
   <input id="pubfilter" type="search" placeholder="Filter by title, author, journal, year…" aria-label="Filter publications">
   <span id="pubcount" class="muted"></span>
 </div>
-{{ $years := slice }}{{ range site.Data.publications }}{{ if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}{{ end }}
+{{ $years := slice }}{{ range hugo.Data.publications }}{{ if not (in $years .year) }}{{ $years = $years | append .year }}{{ end }}{{ end }}
 {{ $years = sort $years "value" "desc" }}
 <div class="pubs-layout">
   <div class="pubs">
@@ -13,7 +13,7 @@
     <section class="yeargroup" id="y{{ $y }}">
       <h2 class="year">{{ $y }}</h2>
       <ul class="plain">
-        {{ range where site.Data.publications "year" $y }}{{ partial "paper.html" (dict "p" . "full" true) }}{{ end }}
+        {{ range where hugo.Data.publications "year" $y }}{{ partial "paper.html" (dict "p" . "full" true) }}{{ end }}
       </ul>
     </section>
     {{ end }}

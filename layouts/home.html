@@ -27,9 +27,9 @@
 
 <section class="block two">
   <div>
-    <h2 class="sec">Recent papers <a class="more" href="{{ "publications/" | relURL }}">All {{ len site.Data.publications }} publications →</a></h2>
+    <h2 class="sec">Recent papers <a class="more" href="{{ "publications/" | relURL }}">All {{ len hugo.Data.publications }} publications →</a></h2>
     <ul class="plain">
-      {{ range first 5 (where site.Data.publications "home" "ne" false) }}{{ partial "paper.html" (dict "p" . "full" false) }}{{ end }}
+      {{ range first 5 (where hugo.Data.publications "home" "ne" false) }}{{ partial "paper.html" (dict "p" . "full" false) }}{{ end }}
     </ul>
   </div>
   <div>
@@ -46,7 +46,7 @@
 <section class="block">
   <h2 class="sec">Talks and videos <a class="more" href="{{ "talks/" | relURL }}">All talks →</a></h2>
   <div class="videos">
-    {{ $feat := slice }}{{ range site.Data.talks }}{{ range .items }}{{ if .featured }}{{ $feat = $feat | append . }}{{ end }}{{ end }}{{ end }}
+    {{ $feat := slice }}{{ range hugo.Data.talks }}{{ range .items }}{{ if .featured }}{{ $feat = $feat | append . }}{{ end }}{{ end }}{{ end }}
     {{ range first 4 $feat }}{{ partial "talk.html" . }}{{ end }}
   </div>
 </section>

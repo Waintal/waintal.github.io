@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="page-head"><h1>{{ .Title }}</h1></div>
 <div class="prose">{{ .Content }}</div>
-{{ range site.Data.talks }}
+{{ range hugo.Data.talks }}
 <section class="block">
   <h2 class="sec">{{ .group }}</h2>
   <div class="videos">{{ range .items }}{{ partial "talk.html" . }}{{ end }}</div>
